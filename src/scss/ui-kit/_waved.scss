@@ -1,0 +1,32 @@
+// Волна
+.waved {
+  position      : absolute;
+  inset         : 0;
+  border-radius : inherit;
+  pointer-events: none;
+  overflow      : hidden;
+  z-index       : 1;
+
+  &-circle {
+    display         : block;
+    position        : absolute;
+    border-radius   : 50%;
+    background-color: var(--color-black-40);
+    width           : 40px;
+    height          : 40px;
+    transform       : translate(-50%, -50%);
+    animation       : scale-up 1s ease forwards;
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    opacity  : 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    opacity  : 0;
+    transform: translate(-50%, -50%) scale(25);
+  }
+}

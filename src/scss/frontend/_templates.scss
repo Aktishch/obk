@@ -1,0 +1,145 @@
+// Логотип
+.logo {
+  width: 138px;
+
+  @media(max-width: $xl) {
+    width: 115px;
+  }
+
+  @media(max-width: $md) {
+    width: 100px;
+  }
+}
+
+// Шапка документа
+.header {
+  top      : 0;
+  left     : 0;
+  right    : 0;
+  transform: translateY(var(--top));
+
+  @media(min-width: $xl) {
+    &__tel {
+      font-size: var(--text-24);
+    }
+  }
+
+  @media(min-width: $xxl) {
+    & {
+      padding-block: 36px;
+    }
+
+    &__tel {
+      font-size: var(--text-30);
+    }
+  }
+}
+
+// Навигация
+.nav {
+  max-width: 700px;
+
+  &__link {
+    letter-spacing: 0.05em;
+  }
+
+  @media(min-width: $xxl) {
+    & {
+      grid-gap: 40px;
+      gap     : 40px;
+    }
+  }
+
+  @media(max-width: $xxl) {
+    & {
+      max-width: 660px;
+    }
+  }
+
+  @media(max-width: $xl) {
+    & {
+      max-width: 600px;
+    }
+  }
+}
+
+// Мобильное меню
+.mobile {
+  inset: 0;
+
+  &__content {
+    max-width       : 375px;
+    background-color: var(--color-white-90);
+    backdrop-filter : blur(4px);
+    box-shadow      : 0 0 0 100vw var(--color-black-50);
+  }
+
+  &:not([data-mobile="open"]) {
+    opacity   : 0;
+    visibility: hidden;
+  }
+
+  &:not([data-mobile="open"]) &__content {
+    transform : translateX(-100%);
+    opacity   : 0;
+    visibility: hidden;
+  }
+
+  &:not([data-mobile="open"]) &__head {
+    transform: translateY(-80px);
+  }
+
+  &:not([data-mobile="open"]) &__nav {
+    transform: translateX(-220px);
+    opacity  : 0;
+  }
+
+  &:not([data-mobile="open"]) &__footer {
+    transform: translateY(-50px);
+    opacity  : 0;
+  }
+
+  &[data-mobile="open"] {
+    opacity   : 1;
+    visibility: visible;
+  }
+
+  &[data-mobile="open"] &__content {
+    transform : translateX(0);
+    opacity   : 1;
+    visibility: visible;
+  }
+
+  &[data-mobile="open"] &__head {
+    transform: translateY(0);
+  }
+
+  &[data-mobile="open"] &__nav {
+    transform: translateX(0);
+    opacity  : 1;
+  }
+
+  &[data-mobile="open"] &__footer {
+    transform: translateY(0);
+    opacity  : 1;
+  }
+}
+
+// Подвал
+.footer {
+  @media(min-width: $xl) {
+    &__tel {
+      font-size: var(--text-24);
+    }
+  }
+
+  @media(min-width: $xxl) {
+    & {
+      padding-block: 36px;
+    }
+
+    &__tel {
+      font-size: var(--text-30);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// Ширина
+.w {
+  @include getMedia {
+    &-100 {
+      width: 100%;
+    }
+
+    &-50 {
+      width: 50%;
+    }
+
+    &-max {
+      width: max-content;
+    }
+
+    &-0 {
+      width: 0;
+    }
+
+    &-auto {
+      width: auto !important;
+    }
+  }
+}

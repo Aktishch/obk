@@ -1,0 +1,38 @@
+// Появление
+.ease {
+  transition-timing-function: ease;
+}
+
+.ease-in {
+  transition-timing-function: ease-in;
+}
+
+.ease-out {
+  transition-timing-function: ease-out;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.linear {
+  transition-timing-function: linear;
+}
+
+// Время
+@for $i from 1 through 10 {
+  .duration-#{$i} {
+    transition-duration: #{calc($i / 10) + s};
+  }
+}
+
+// Задержка
+.delay {
+  @include getMedia {
+    @for $i from 1 through 10 {
+      &-#{$i} {
+        transition-delay: #{calc($i / 10) + s};
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// Высота
+.h {
+  @include getMedia {
+    &-100 {
+      height: 100%;
+    }
+
+    &-50 {
+      height: 50%;
+    }
+
+    &-max {
+      height: max-content;
+    }
+
+    &-0 {
+      height: 0;
+    }
+
+    &-auto {
+      height: auto !important;
+    }
+  }
+}

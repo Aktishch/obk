@@ -1,0 +1,107 @@
+// Обнуление
+* {
+
+  &,
+  &::before,
+  &::after {
+    margin                     : 0;
+    padding                    : 0;
+    box-sizing                 : border-box;
+    font-family                : var(--font-base);
+    -webkit-tap-highlight-color: var(--color-none);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1:empty,
+h2:empty,
+h3:empty,
+h4:empty,
+h5:empty,
+h6:empty,
+p:empty {
+  display: none;
+}
+
+ul {
+  list-style: none outside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+a {
+  color          : inherit;
+  text-decoration: none;
+}
+
+picture {
+  position: static !important;
+}
+
+img {
+  max-width  : 100%;
+  user-select: none;
+
+  &:is([src=""], [src="/"]) {
+    display: none;
+  }
+}
+
+dialog {
+  position: static;
+  width   : auto;
+  height  : auto;
+  border  : none;
+}
+
+address {
+  font-style: normal;
+}
+
+sub,
+sup {
+  font-size: 0.8em;
+}
+
+q {
+  quotes: "\201c""\201E";
+}
+
+button,
+input,
+textarea,
+select {
+  outline         : none;
+  border          : none;
+  color           : var(--color-black);
+  background-color: var(--color-none);
+
+  &:-webkit-autofill {
+
+    &,
+    &:hover,
+    &:focus {
+      -webkit-text-fill-color: var(--color-black);
+      box-shadow             : inset 0 0 0 1000px var(--color-white);
+      border                 : 1px solid var(--color-grey);
+      transition             : background-color 5000s ease-in-out 0s;
+    }
+  }
+}
+
+textarea {
+  resize  : none;
+  overflow: auto;
+}
+
+select,
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+  appearance: none;
+}

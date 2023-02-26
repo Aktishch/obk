@@ -1,0 +1,8 @@
+// Зум
+.zoom {
+  @for $i from 1 through 5 {
+    &-#{$i} {
+      font-size: #{$i + em};
+    }
+  }
+}

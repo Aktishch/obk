@@ -1,0 +1,22 @@
+// Модальное окно
+.dialog {
+  color           : var(--color-black);
+  background-color: var(--color-white);
+  max-width       : 100%;
+
+  &--sm {
+    width: var(--sm);
+  }
+
+  &--md {
+    width: var(--md);
+  }
+
+  &--lg {
+    width: var(--lg);
+  }
+
+  &--xl {
+    width: var(--xl);
+  }
+}

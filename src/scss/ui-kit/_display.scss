@@ -1,0 +1,24 @@
+// Дисплей
+.d {
+  @include getMedia {
+    &-block {
+      display: block;
+    }
+
+    &-inline {
+      display: inline;
+    }
+
+    &-flex {
+      display: flex;
+    }
+
+    &-grid {
+      display: grid;
+    }
+
+    &-none {
+      display: none;
+    }
+  }
+}

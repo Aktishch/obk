@@ -1,0 +1,28 @@
+// Внутренние отступы
+.p {
+  @include getSpacing("padding");
+
+  &t {
+    @include getSpacing("padding-top");
+  }
+
+  &b {
+    @include getSpacing("padding-bottom");
+  }
+
+  &l {
+    @include getSpacing("padding-left");
+  }
+
+  &r {
+    @include getSpacing("padding-right");
+  }
+
+  &y {
+    @include getSpacing("padding-block");
+  }
+
+  &x {
+    @include getSpacing("padding-inline");
+  }
+}

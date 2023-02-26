@@ -1,0 +1,109 @@
+// Кнопка
+.btn {
+  & * {
+    pointer-events: none
+  }
+
+  font: {
+    size  : var(--text-16);
+    weight: 600;
+  }
+
+  --btn-color    : var(--color-black);
+  --btn-accent   : var(--color-white);
+  color          : var(--btn-color);
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  position       : relative;
+  letter-spacing : 0.05em;
+  user-select    : none;
+  transition     : 0.2s ease;
+  cursor         : pointer;
+
+  @include getBtn("primary");
+  @include getBtn("second");
+  @include getBtn("gray");
+
+  &--lg {
+    --size: var(--size-lg);
+    height: var(--size);
+  }
+
+  &--md {
+    --size: var(--size-md);
+    height: var(--size);
+  }
+
+  &--lg,
+  &--md {
+    border-radius : 5px;
+    padding-inline: calc(var(--size) / 2);
+
+    @media(max-width: $xl) {
+      & {
+        height: 80px;
+      }
+    }
+
+    @media(max-width: $md) {
+      & {
+        height: 60px;
+      }
+    }
+  }
+
+  &--fill {
+    color           : var(--btn-accent);
+    background-color: var(--btn-color);
+  }
+
+  &--fade {
+    color           : var(--btn-color);
+    background-color: var(--btn-fade);
+  }
+
+  &--light {
+    color           : var(--btn-color);
+    background-color: var(--btn-accent);
+    border          : 1px solid var(--color-none);
+  }
+
+  &--contur {
+    border: 1px solid var(--btn-color);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px var(--btn-focus);
+  }
+
+  &:active {
+    box-shadow: inset 0 4px 4px var(--color-black-30);
+    transform : translateY(4px);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity       : 0.5;
+  }
+
+  @media(hover) {
+    &:hover {
+      background-color: var(--btn-fade);
+    }
+
+    &--fill:hover {
+      background-color: var(--btn-light);
+    }
+
+    &--fade:hover {
+      color           : var(--btn-accent);
+      background-color: var(--btn-light);
+    }
+
+    &--light:hover {
+      background-color: var(--btn-accent);
+      border-color    : var(--btn-color);
+    }
+  }
+}

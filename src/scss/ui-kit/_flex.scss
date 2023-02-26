@@ -1,0 +1,81 @@
+// Флекс
+.flex {
+  display: flex;
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-grow {
+    flex-grow: 1;
+  }
+
+  &-column {
+    flex-direction: column;
+  }
+
+  &-row {
+    flex-direction: row;
+  }
+}
+
+// Последовательность
+.order {
+  @include getMedia {
+    @for $i from 1 through 5 {
+      &-#{$i} {
+        order: #{$i};
+      }
+    }
+  }
+}
+
+// Выравнивание элементов
+.align {
+  &-start {
+    align-items: flex-start;
+  }
+
+  &-center {
+    align-items: center;
+  }
+
+  &-end {
+    align-items: flex-end;
+  }
+
+  &-stretch {
+    align-items: stretch;
+  }
+}
+
+// Выравнивание контента
+.justify {
+  &-start {
+    justify-content: flex-start;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-end {
+    justify-content: flex-end;
+  }
+
+  &-stretch {
+    justify-content: stretch;
+  }
+
+  &-between {
+    justify-content: space-between;
+  }
+
+  &-around {
+    justify-content: space-around;
+  }
+
+  &-evenly {
+    justify-content: space-evenly;
+  }
+}

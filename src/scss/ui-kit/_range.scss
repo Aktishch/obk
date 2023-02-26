@@ -1,0 +1,54 @@
+// Бегунок
+.range {
+  max-width: 350px;
+
+  &-cover {
+    max-width: 60px;
+  }
+
+  &-wrapper {
+    --bubble-size: 28px;
+    position     : relative;
+    height       : 8px;
+    border-radius: 4px;
+
+    &:nth-child(2) {
+      margin-top: -8px;
+    }
+  }
+
+  &-input {
+    display      : block;
+    width        : 100%;
+    height       : 100%;
+    border-radius: inherit;
+  }
+
+  &-progress {
+    pointer-events: none;
+    border-radius : inherit;
+    position      : absolute;
+    top           : 0;
+    bottom        : 0;
+    height        : 100%;
+    z-index       : 1;
+  }
+
+  &-bubble {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    font-size      : var(--text-10);
+    width          : var(--bubble-size);
+    height         : var(--bubble-size);
+    box-shadow     : 0 0 0 2px var(--color-primary-40);
+    border         : 2px solid var(--color-grey);
+    border-radius  : 50%;
+    pointer-events : none;
+    margin-block   : auto;
+    position       : absolute;
+    top            : 0;
+    bottom         : 0;
+    z-index        : 2;
+  }
+}

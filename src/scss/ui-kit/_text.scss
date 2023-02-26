@@ -1,0 +1,96 @@
+// Текст
+.text {
+  font: {
+    weight: normal;
+    style : normal;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--justify {
+    text-align: justify;
+  }
+
+  &--underline {
+    text: {
+      decoration      : underline;
+      underline-offset: 4px;
+    }
+  }
+
+  &--dotted {
+    text: {
+      decoration      : underline dotted;
+      underline-offset: 4px;
+    }
+  }
+
+  &--dashed {
+    text: {
+      decoration      : underline dashed;
+      underline-offset: 4px;
+    }
+  }
+
+  &--line {
+    text-decoration: line-through;
+  }
+
+  &--clone {
+    box-decoration-break: clone;
+  }
+
+  &--hidden {
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+    overflow     : hidden;
+  }
+
+  @include getMedia {
+    @for $i from 5 through 25 {
+      &-#{calc(2 * $i)} {
+        font-size: var(--text-#{calc(2 * $i)});
+      }
+    }
+  }
+}
+
+// Шрифты
+@each $key,
+$value in $font-family {
+  .font-#{$key} {
+    font-family: var(--font-#{$key});
+  }
+}
+
+// Жирность
+@for $i from 1 to 10 {
+  .bold-#{$i} {
+    font-weight: #{calc($i * 100)};
+  }
+}
+
+// Межстрочный интервал
+@for $i from 1 to 10 {
+  .lh-#{$i} {
+    line-height: #{calc(1 + ($i / 10))};
+  }
+}

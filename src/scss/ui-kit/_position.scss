@@ -1,0 +1,29 @@
+// Позиционирование
+.static {
+  position: static;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+// Наложение
+.zi {
+  @for $i from 0 through 10 {
+    &-#{$i} {
+      z-index: #{calc(100 * $i)};
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve">
+  <defs>
+
+    <symbol id="loader" width="100%" height="100%" viewBox="22 22 44 44">
+      <circle cx="44" cy="44" r="20.2" fill="none" stroke="currentColor" stroke-width="4"></circle>
+    </symbol>
+
+    <symbol id="burger" width="100%" height="100%" viewBox="0 0 48 48">
+      <path d="M41,14H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,14Z" fill="currentColor"/>
+      <path d="M41,26H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,26Z" fill="currentColor"/>
+      <path d="M41,38H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,38Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="close" width="100%" height="100%" viewBox="0 0 16 16">
+      <path d="M1 15L15 1M1 1L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="success" width="100%" height="100%" viewBox="0 0 68 68">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M34 68C52.7777 68 68 52.7777 68 34C68 15.2223 52.7777 0 34 0C15.2223 0 0 15.2223 0 34C0 52.7777 15.2223 68 34 68ZM49.7552 28.5052C51.4149 26.8455 51.4149 24.1545 49.7552 22.4948C48.0955 20.8351 45.4045 20.8351 43.7448 22.4948L29.75 36.4896L24.2552 30.9948C22.5955 29.3351 19.9045 29.3351 18.2448 30.9948C16.5851 32.6545 16.5851 35.3455 18.2448 37.0052L26.7448 45.5052C28.4045 47.1649 31.0955 47.1649 32.7552 45.5052L49.7552 28.5052Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="arrow-left" width="100%" height="100%" viewBox="0 0 21 12">
+      <path d="M0.469669 5.46967C0.176777 5.76256 0.176777 6.23744 0.469669 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46446 6.59619 0.989591 6.3033 0.696698C6.01041 0.403804 5.53553 0.403804 5.24264 0.696698L0.469669 5.46967ZM21 5.25L1 5.25L1 6.75L21 6.75L21 5.25Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="arrow-right" width="100%" height="100%" viewBox="0 0 21 12">
+      <path d="M20.5303 5.46967C20.8232 5.76256 20.8232 6.23744 20.5303 6.53033L15.7574 11.3033C15.4645 11.5962 14.9896 11.5962 14.6967 11.3033C14.4038 11.0104 14.4038 10.5355 14.6967 10.2426L18.9393 6L14.6967 1.75736C14.4038 1.46446 14.4038 0.989591 14.6967 0.696698C14.9896 0.403804 15.4645 0.403804 15.7574 0.696698L20.5303 5.46967ZM-6.55668e-08 5.25L20 5.25L20 6.75L6.55668e-08 6.75L-6.55668e-08 5.25Z" fill="currentColor"/>
+    </symbol>
+
+  </defs>
+</svg>

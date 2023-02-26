@@ -1,0 +1,12 @@
+// Радиус
+.radius {
+  @for $i from 1 through 10 {
+    &-#{$i} {
+      border-radius: #{calc(var(--spacing) * $i)};
+    }
+  }
+
+  &-max {
+    border-radius: 50%;
+  }
+}

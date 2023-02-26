@@ -1,0 +1,139 @@
+// Переключатели
+.switch {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  position       : relative;
+  user-select    : none;
+  color          : var(--color-primary);
+  border         : 1px solid var(--color-gray);
+  transition     : 0.2s linear;
+  cursor         : pointer;
+
+  &--checkbox {
+    min-width    : 24px;
+    width        : 24px;
+    height       : 24px;
+    border-radius: 2px;
+
+    &::after {
+      content         : "";
+      display         : block;
+      width           : 100%;
+      height          : 100%;
+      background-color: var(--color-white);
+      border-radius   : inherit;
+      opacity         : 0;
+      transition      : opacity 0.1s linear;
+      mask            : url("../img/pictures/checkbox.svg") no-repeat center / 16px;
+    }
+
+    &:checked {
+      border-color    : var(--color-primary);
+      background-color: var(--color-primary);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--radio {
+    min-width    : 20px;
+    width        : 20px;
+    height       : 20px;
+    border-radius: 50%;
+
+    &::after {
+      content         : "";
+      display         : block;
+      width           : 12px;
+      height          : 12px;
+      background-color: currentColor;
+      border-radius   : inherit;
+      transform       : scale(0);
+      transition      : opacity 0.1s linear, transform 0.1s linear;
+      opacity         : 0;
+    }
+
+    &:checked {
+      &::after {
+        opacity  : 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  &--toggle {
+    min-width    : 80px;
+    width        : 80px;
+    height       : 36px;
+    border-radius: 20px;
+
+    &::after {
+      content      : "";
+      position     : absolute;
+      top          : 0;
+      bottom       : 0;
+      margin-block : auto;
+      height       : 24px;
+      border-radius: 20px;
+    }
+
+    &:not(:checked)::after {
+      left            : 4px;
+      right           : 50px;
+      background-color: var(--color-gray);
+      transition      : left 0.5s ease, right 0.4s ease 0.2s;
+    }
+
+    &:checked::after {
+      left            : 50px;
+      right           : 4px;
+      background-color: currentColor;
+      transition      : left 0.4s ease 0.2s, right 0.5s ease, background-color 0.35s ease -0.1s;
+    }
+  }
+
+  &:not(&--toggle) {
+    &::before {
+      content         : "";
+      position        : absolute;
+      left            : 50%;
+      top             : 50%;
+      border-radius   : inherit;
+      background-color: currentColor;
+    }
+
+    &:checked {
+      &::before {
+        animation: switch-checked 0.5s linear both 1;
+      }
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity       : 0.5;
+  }
+
+  @media(hover) {
+    &:hover {
+      box-shadow: 0 0 0 4px var(--color-primary-40);
+    }
+  }
+}
+
+@keyframes switch-checked {
+  0% {
+    width    : 100%;
+    height   : 100%;
+    opacity  : 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  50% {
+    opacity  : 0;
+    transform: translate(-50%, -50%) scale(3);
+  }
+}

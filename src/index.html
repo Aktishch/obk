@@ -1,0 +1,317 @@
+<% var data = {
+
+  title: 'ОБК',
+  status: 'index'
+
+} %>
+
+<%= _.template(require('./includes/header.html').default)({data}) %>
+
+<!-- Главный блок -->
+
+<main class="main container relative">
+  <div class="bg-block overflow-visible">
+    <picture>
+      <source srcset="img/pictures/bg-1.webp" type="image/webp">
+      <img class="main__bg main__bg--1 absolute w-100" src="img/pictures/bg-1.png" alt="">
+    </picture>
+    <picture>
+      <source srcset="img/pictures/bg-2.webp" type="image/webp">
+      <img class="main__bg main__bg--2 absolute w-100" src="img/pictures/bg-2.png" alt="">
+    </picture>
+  </div>
+  <div class="relative">
+    <h3 class="main__subtitle text text--center text-14 text-md-16 text-lg-20 bold-4 lh-5 fade-20">производим все виды оконного бруса</h3>
+    <h1 class="flex flex-column text-18 text-md-26 text-lg-46">
+      <div class="main__title text text--center text--uppercase bold-4 lh-2 zoom-4">ОКОННЫЙ <span class="color-primary">БРУС</span></div>
+      <div class="flex flex-wrap align-center justify-center gap-10">
+        <span class="main__text d-none d-lg-block text-24 bold-4 lh-5 fade-10">
+          Тут нужен какой-то <br>
+          текст для того, чтобы <br>
+          закрыть левую точку
+        </span>
+        <span class="main__title text text--center text--uppercase bold-4 lh-2 zoom-4">КАРЕЛИИ</span>
+        <div class="main__text d-none d-lg-block text-30 bold-4 lh-5">
+          <span class="fade-20">напрямую</span><br>
+          <span class="fade-20">от производителя</span><br>
+          <span>от 58 000 руб/м3</span>
+        </div>
+      </div>
+    </h1>
+    <button class="main__btn btn btn--primary btn--lg btn--fill text-md-18 text-lg-22 w-100" data-waved>Перейти в каталог</button>
+  </div>
+</main>
+
+<!-- Выгода -->
+
+<section class="benefit container container--sm relative" data-listing>
+  <div class="benefit__content mb-5 mb-md-10">
+    <h3 class="benefit__subtitle text text--center text-14 text-md-16 bold-5 lh-5 fade-10 mb-2">какой-то подзаголовок сделать ещё</span>
+    <h2 class="benefit__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5">
+      <span class="zoom-2">
+        ВЫГОДНЫЕ <br class="d-none d-md-block">
+        <span class="color-primary">ПРЕДЛОЖЕНИЯ</span><br class="d-none d-md-block">
+        <span class="pl-lg-10 ml-lg-5">ДЕКАБРЯ</span>
+      </span>
+    </h2>
+    <p class="benefit__text text text--center text-16 text-md-20 text-lg-26 bold-3 lh-4 pl-lg-10 ml-lg-5">
+      <span class="bold-5">Зарабатывайте больше</span> <br>
+      за счет снижения закупочных цен
+    </p>
+  </div>
+  <div class="grid gap-lg-9 pt-lg-5">
+    <% for (var i = 1; i < 4; i++) { %>
+      <div class="col-12 col-lg-4 <%= i == 1 ? '' : 'd-none d-md-block mt-8 mt-lg-0' %>" <%= i == 1 ? '' : 'data-listing-item' %>>
+        <div class="benefit__card card link-wrapper border h-100" data-waved>
+          <div class="benefit__pack pack pack--rect bg-grey w-100">
+            <div class="loader">
+              <span class="loader-progress">
+                <svg class="loader-icon icon">
+                  <use xlink:href="img/icons.svg#loader">
+                </svg>
+              </span>
+            </div>
+            <picture>
+              <source srcset="img/pictures/benefit-<%= i %>.webp" type="image/webp">
+              <img class="image image--rise" loading="lazy" src="img/pictures/benefit-<%= i %>.jpg" alt="">
+            </picture>
+          </div>
+          <div class="card-content py-5 px-4 px-lg-0 py-md-10">
+            <div class="flex align-center justify-between mb-3 mb-md-5">
+              <span class="benefit__name link text text--uppercase text-16 text-md-22 text-lg-20 bold-4 lh-5">
+                Брус клееный <br>(сосна), 1 кат (АЕ)
+              </span>
+              <button class="benefit__btn btn btn--contur text-18 radius-max fade-20 mr-10">
+                <svg class="icon">
+                  <use xlink:href="img/icons.svg#arrow-right">
+                </svg>
+              </button>
+            </div>
+            <h4 class="benefit__price text-12 text-md-16 text-lg-20">
+              <span class="text text--uppercase bold-4 lh-1 zoom-2">10 000 рублей</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+  <button class="btn btn--primary btn--lg btn--fill d-md-none mx-auto mt-10" data-waved data-listing-show>Показать ёще</button>
+</section>
+
+<!-- Наличие -->
+
+<section class="availability container">
+  <h2 class="availability__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 mb-md-10">
+    <span class="zoom-2">
+      <span class="color-primary">В ПОСТОЯННОМ <br class="d-none d-md-block">
+      <span class="pl-lg-10 ml-lg-9">НАЛИЧИИ</span></span><br class="d-block d-md-none">
+      БОЛЕЕ 80м<sup>3</sup>
+    </span>
+  </h2>
+  <div class="flex flex-column" data-listing>
+    <% for (var i = 1; i < 4; i++) { %>
+      <div class="availability__card card grid <%= i == 1 ? '' : 'd-none d-md-grid mt-5 mt-md-8' %>" <%= i == 1 ? '' : 'data-listing-item' %> data-waved>
+        <div class="col-6 flex align-center bg-primary">
+          <div class="availability__pack pack pack--rect w-100">
+            <picture>
+              <source srcset="img/pictures/availability-<%= i %>.webp" type="image/webp">
+              <img class="image image--sd image--tl" src="img/pictures/availability-<%= i %>.png" alt="">
+            </picture>
+          </div>
+          <div class="flex flex-column py-3 px-3 py-md-10 px-md-5 px-lg-7">
+            <h4 class="availability__text color-white text text--uppercase text-20 text-md-38 lh-4">
+              <% if (i == 1) { %>
+                <%= 'Брус клееный <br>(сосна)' %>
+              <% } else if (i == 2) { %>
+                <%= 'Доска массив <br>(сосна)' %>
+              <% } else if (i == 3) { %>
+                <%= 'Доска <br>сращенная' %>
+              <% } %>
+            </h4>
+          </div>
+        </div>
+        <div class="col-6 availability__content card-content justify-center relative bg-grey overflow-hidden pt-5 pb-10 pt-md-10 px-5 px-lg-5">
+          <p class="text-16 text-md-22 bold-3 lh-5">
+            Идеален для производства окон <br class="d-none d-md-block">
+            любого размера и конфигурации. <br class="d-none d-md-block">
+            <span class="bold-5">Ваши рамы прослужат до 20 лет <br class="d-none d-md-block">
+            без потери внешнего вида.</span>
+          </p>
+          <button class="availability__btn btn btn--primary btn--fill text-md-30 absolute">
+            <svg class="icon">
+              <use xlink:href="img/icons.svg#arrow-right">
+            </svg>
+          </button>
+        </div>
+      </div>
+    <% } %>
+    <button class="btn btn--primary btn--lg btn--fill d-md-none mx-auto mt-10" data-waved data-listing-show>Показать ёще</button>
+  </div>
+</section>
+
+<!-- Ассортимент -->
+
+<% var assortment = ['Дверные коробки', 'Щиты', 'Наличники', 'Половой шпунт', 'Вагонка', 'Имитация бруса'] %>
+
+<section class="assortment container relative">
+  <div class="bg-block overflow-visible">
+    <picture>
+      <source srcset="img/pictures/bg-3.webp" type="image/webp">
+      <img class="assortment__bg absolute w-100" src="img/pictures/bg-3.png" alt="">
+    </picture>
+  </div>
+  <div class="relative">
+    <h2 class="assortment__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 mb-md-10">
+      <span class="zoom-2">
+        УДОБНО, <br class="d-block d-md-none">
+        ПОТОМУ ЧТО <br>
+        <span class="assortment__text color-primary">ВСЕ В ОДНОМ МЕСТЕ</span>
+    </h2>
+    <div class="grid gap-3 gap-md-5 gap-lg-10 pt-lg-5">
+      <% for (var i = 0; i < assortment.length; i++) { %>
+        <div class="col-6 col-lg-4">
+          <div class="card border h-100" data-waved>
+            <div class="pack pack--rect bg-grey">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/assortment.webp" type="image/webp">
+                <img class="image image--sd image--bl pt-lg-10 px-lg-10" loading="lazy" src="img/pictures/assortment.jpg" alt="">
+              </picture>
+            </div>
+            <div class="card-content align-center justify-center py-5 py-md-8 px-2">
+              <h4 class="text text--center text--uppercase text-16 text-md-26 text-lg-36 bold-5 mb-md-2"><%= assortment[i] %></h4>
+              <button class="assortment__btn btn btn--second text text--center text--underline text-12 text-md-16 text-lg-18 bold-5 radius-1 p-1 mt-auto">Узнать подробнее</button>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!-- Отзывы -->
+
+<section class="reviews container overflow-hidden">
+  <div class="reviews-slider relative">
+    <h2 class="reviews__title flex flex-column align-end text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 w-lg-max mb-5 mb-md-10 mr-auto">
+      <div class="flex align-end">
+        <div class="reviews__number color-primary">
+          <span class="zoom-5 bold-2">950</span>
+        </div>
+        <div class="zoom-2">
+          <span class="color-primary">+</span> КЛИЕНТОВ
+        </div>
+      </div>
+      <span class="zoom-2">ПОДТВЕРЖДАЮТ</span>
+      <div class="reviews-slider__top flex align-center">
+        <span class="zoom-2 mb-5 mb-md-0 mr-lg-10 pr-md-5">КАЧЕСТВО</span>
+        <div class="flex align-center">
+          <button class="reviews-slider__btn swiper-button-prev default btn btn--primary btn--fill radius-1 mt-0 mr-5 mr-md-10" data-waved>
+            <svg class="icon text-md-20">
+              <use xlink:href="img/icons.svg#arrow-left">
+            </svg>
+          </button>
+          <div class="swiper-pagination color-primary"></div>
+          <button class="reviews-slider__btn swiper-button-next default btn btn--primary btn--fill radius-1 mt-0 ml-5 ml-md-10" data-waved>
+            <svg class="icon text-md-20">
+              <use xlink:href="img/icons.svg#arrow-right">
+            </svg>
+          </button>
+        </div>
+      </div>
+    </h2>
+    <div class="swiper swiper--overwrap overflow-visible">
+      <div class="swiper-wrapper">
+        <% for (var i = 0; i < 5; i++) { %>
+          <div class="swiper-slide card border h-auto p-5 p-md-10" data-waved>
+            <div class="reviews__head flex align-center mb-5 mb-md-10">
+              <div class="reviews__pack pack pack--box radius-max mb-3 mb-md-0 mr-4 mr-md-8">
+                <div class="loader">
+                  <span class="loader-progress">
+                    <svg class="loader-icon icon">
+                      <use xlink:href="img/icons.svg#loader">
+                    </svg>
+                  </span>
+                </div>
+                <picture>
+                  <source srcset="img/pictures/user.webp" type="image/webp">
+                  <img class="image" loading="lazy" src="img/pictures/user.png" alt="">
+                </picture>
+              </div>
+              <div class="flex flex-column">
+                <span class="text-18 text-md-24 text-lg-30 bold-5 lh-4 mb-1">Владимир <br class="d-none d-md-block"> Владимирович</span>
+                <span class="text-14 text-lg-18 bold-3 fade-30">Владелец компании “Рога и Копыта”</span>
+              </div>
+            </div>
+            <p class="text-14 text-md-16 text-lg-20 bold-3 lh-7">
+              <span class="bold-5">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.</span> Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое....
+            </p>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Производство -->
+
+<section class="production container relative overflow-hidden">
+  <h2 class="production__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 w-md-max">
+    <div class="production__top flex align-end">
+      <div class="flex align-end">
+        <div class="production__number color-primary">
+          <span class="zoom-5 bold-2">13</span>
+        </div>
+        <span class="zoom-2 color-primary">ЛЕТ</span>
+      </div>
+      <span class="production__subtitle text text--left text-12 text-md-14 text-lg-16 bold-5 lh-5 fade-10 mb-lg-3">какой-то подзаголовок сделать ещё</span>
+    </div>
+    <div class="zoom-2 mr-auto mr-md-0">НЕПРЕРЫВНОГО</div>
+    <div class="zoom-2 mr-auto">СОВЕРШЕНСТВА</div>
+  </h2>
+  <div class="production__block flex align-end">
+    <a class="production__pack production__pack--1 pack pack--half bg-grey w-100" data-fancybox href="img/pictures/production-1.jpg">
+      <div class="loader">
+        <span class="loader-progress">
+          <svg class="loader-icon icon">
+            <use xlink:href="img/icons.svg#loader">
+          </svg>
+        </span>
+      </div>
+      <picture>
+        <source srcset="img/pictures/production-1.webp" type="image/webp">
+        <img class="image image--rise" loading="lazy" src="img/pictures/production-1.jpg" alt="">
+      </picture>
+    </a>
+    <div class="flex flex-column">
+      <p class="text-16 text-md-20 text-lg-26 bold-3 lh-5 mb-5 mb-md-10">
+        На площади 5000 м2 в поселке <br>
+        Волома <span class="bold-5">мы осуществляем полный <br>
+        цикл производства оконного бруса:</span> <br>
+        от лесопиления до логистики.
+      </p>
+      <button class="btn btn--primary btn--lg btn--fill text-16 text-md-20 w-max" data-waved>Подробнее <span class="d-none d-md-inline">о производстве</span></button>
+    </div>
+  </div>
+  <a class="production__pack production__pack--2 pack pack--photo d-none d-lg-block absolute bg-grey w-100" data-fancybox href="img/pictures/production-2.jpg">
+    <div class="loader">
+      <span class="loader-progress">
+        <svg class="loader-icon icon">
+          <use xlink:href="img/icons.svg#loader">
+        </svg>
+      </span>
+    </div>
+    <picture>
+      <source srcset="img/pictures/production-2.webp" type="image/webp">
+      <img class="image image--rise" loading="lazy" src="img/pictures/production-2.jpg" alt="">
+    </picture>
+  </a>
+</section>
+
+<%= require('./includes/footer.html').default %>

@@ -1,0 +1,44 @@
+// Анимация
+.anim {
+  transition: 0.3s ease;
+
+  &--fade:not([data-anim="show"]) {
+    visibility: hidden;
+    opacity   : 0;
+  }
+
+  &--increase:not([data-anim="show"]) {
+    transform: scale(0);
+    opacity  : 0;
+  }
+
+  &--decrease:not([data-anim="show"]) {
+    transform: scale(1.3);
+    opacity  : 0;
+  }
+
+  &--circle:not([data-anim="show"]) {
+    transform: rotate(1turn);
+    opacity  : 0;
+  }
+
+  &--up:not([data-anim="show"]) {
+    transform: translateY(50px);
+    opacity  : 0;
+  }
+
+  &--down:not([data-anim="show"]) {
+    transform: translateY(-50px);
+    opacity  : 0;
+  }
+
+  &--left:not([data-anim="show"]) {
+    transform: translateX(50px);
+    opacity  : 0;
+  }
+
+  &--right:not([data-anim="show"]) {
+    transform: translateX(-50px);
+    opacity  : 0;
+  }
+}

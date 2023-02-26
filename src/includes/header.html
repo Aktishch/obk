@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="autor" content="Александр Актищев"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <title><%= data.title %></title>
+</head>
+<body>
+
+  <!-- Шапка документа -->
+
+  <header class="header container flex align-center justify-between gap-5 sticky zi-3 bg-white border-bottom py-2 py-lg-4 linear duration-3" data-header>
+    <button class="btn btn--primary d-lg-none text-44 radius-2 mr-10" data-waved data-burger>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#burger">
+      </svg>
+    </button>
+    <a class="logo btn" href="/">
+      <picture>
+        <source srcset="img/pictures/logo.webp" type="image/webp">
+        <img class="w-100" src="img/pictures/logo.png" alt="">
+      </picture>
+    </a>
+    <nav class="nav d-none d-lg-flex align-center justify-between gap-3 w-100 mx-auto">
+      <a class="nav__link btn btn--primary link color-black radius-2 p-1" data-waved href="javascript: ;">Ассортимент</a>
+      <a class="nav__link btn btn--primary link color-black radius-2 p-1" data-waved href="javascript: ;">Производство</a>
+      <a class="nav__link btn btn--primary link color-black radius-2 p-1" data-waved href="javascript: ;">Доставка и оплата</a>
+      <a class="nav__link btn btn--primary link color-black radius-2 p-1" data-waved href="javascript: ;">Контакты</a>
+    </nav>
+    <a class="header__tel btn btn--primary d-none d-md-flex link color-black text-20 bold-5 radius-1" data-waved href="tel: +7 (921) 222-70-00">+7 (921) 222-70-00</a>
+  </header>
+
+  <!-- Мобильное меню -->
+
+  <section class="mobile fixed zi-6 w-100 h-100 ease duration-1" data-mobile="hidden">
+    <div class="mobile__content flex flex-column overflow-auto w-100 h-100 ease duration-3">
+      <div class="mobile__head flex align-center relative bg-white border-bottom p-4 ease duration-5 delay-3">
+        <button class="btn text-24 mr-10" data-mobile-close data-waved>
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#close">
+          </svg>
+        </button>
+        <a class="logo btn" href="/">
+          <picture>
+            <source srcset="img/pictures/logo.webp" type="image/webp">
+            <img class="w-100" src="img/pictures/logo.png" alt="">
+          </picture>
+        </a>
+      </div>
+      <div class="mobile__nav flex flex-column relative mb-10 py-8 px-4 ease duration-9 delay-5">
+        <a class="link text-22 bold-5 w-max mb-8" href="index.html">Ассортимент</a>
+        <a class="link text-22 bold-5 w-max mb-8" href="index.html">Производство</a>
+        <a class="link text-22 bold-5 w-max mb-8" href="index.html">Доставка и оплата</a>
+        <a class="link text-22 bold-5 w-max mb-8" href="index.html">Контакты</a>
+      </div>
+      <div class="mobile__footer relative mt-auto px-4 pt-4 pb-10 ease duration-5 delay-9">
+        <div class="flex flex-column">
+          <div class="flex flex-column mb-5">
+            <span class="text-16 bold-4 fade-60 mb-1">Директор</span>
+            <a class="link text-24 bold-5" href="tel: +7 (921) 650 97 97">+7 (921) 650 97 97</a>
+          </div>
+          <div class="flex flex-column">
+            <span class="text-16 bold-4 fade-60 mb-1">Головной офис</span>
+            <a class="link text-24 bold-5" href="tel: +7 (921) 222 70 00">+7 (921) 222 70 00</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

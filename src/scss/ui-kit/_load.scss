@@ -1,0 +1,119 @@
+// Загрузчик
+.loader {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  pointer-events : none;
+  position       : absolute;
+  inset          : 0;
+
+  &-progress {
+    font-size: var(--text-40);
+    color    : var(--color-primary);
+    animation: progress 1.8s linear infinite;
+  }
+
+  &-icon {
+    animation: loader 1.5s ease-in-out infinite;
+  }
+}
+
+// Загрузка
+.loading {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  position       : relative;
+  border-radius  : 50%;
+  color          : var(--color-primary);
+  width          : 100px;
+  height         : 100px;
+
+  &::before,
+  &::after {
+    content         : "";
+    background-color: var(--color-none);
+    position        : absolute;
+    inset           : 0;
+
+    border: {
+      width : 12px;
+      style : solid;
+      color : inherit;
+      radius: inherit;
+    }
+  }
+
+  &::before {
+    border: {
+      left-color : var(--color-none);
+      right-color: var(--color-none);
+    }
+
+    animation: progress 1s linear infinite;
+  }
+
+  &::after {
+    border: {
+      top-color   : var(--color-none);
+      bottom-color: var(--color-none);
+    }
+
+    animation: progress 1.2s linear infinite;
+  }
+
+  &-circle {
+    width           : 40px;
+    height          : 40px;
+    background-color: currentColor;
+    border-radius   : inherit;
+    animation       : loading 1.2s linear infinite;
+  }
+}
+
+@keyframes progress {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    stroke: {
+      dasharray : 1px, 200px;
+      dashoffset: 0px;
+    }
+  }
+
+  50% {
+    stroke: {
+      dasharray : 100px, 200px;
+      dashoffset: -15px;
+    }
+  }
+
+  100% {
+    stroke: {
+      dasharray : 100px, 200px;
+      dashoffset: -125px;
+    }
+  }
+}
+
+@keyframes loading {
+
+  0%,
+  100% {
+    transform: scale(0.4);
+    opacity  : 0.2;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity  : 1;
+  }
+}

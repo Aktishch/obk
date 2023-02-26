@@ -1,0 +1,21 @@
+// Карточка
+.card {
+  display         : flex;
+  flex-direction  : column;
+  position        : relative;
+  background-color: var(--color-white);
+  transition      : box-shadow 0.2s ease;
+  overflow        : hidden;
+
+  &-content {
+    display       : flex;
+    flex-direction: column;
+    flex-grow     : 1;
+  }
+
+  @media(hover) {
+    &:hover {
+      box-shadow: 4px 4px 4px var(--color-black-10);
+    }
+  }
+}

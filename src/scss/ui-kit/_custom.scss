@@ -1,0 +1,101 @@
+// Fancybox
+.fancybox {
+  &-loading {
+    pointer-events: none;
+
+    & .fancybox__slide {
+      padding : 0;
+      overflow: hidden;
+    }
+
+    & .fancybox__content {
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+      width          : 100vw;
+      height         : 100vh;
+      pointer-events : all;
+      overflow       : hidden;
+    }
+
+    & .carousel__button {
+      display: none;
+    }
+  }
+
+  &__content {
+    padding   : 0;
+    background: none;
+    max-width : 100%;
+
+    & :focus:not(.carousel__button.is-close) {
+      outline: none;
+    }
+
+    &>.carousel__button.is-close {
+      top             : 8px;
+      right           : 8px;
+      color           : var(--color-black);
+      background-color: var(--color-white);
+      box-shadow      : 0 4px 8px var(--color-black-10);
+    }
+  }
+
+  @media(max-width: $md) {
+    &__content>.carousel__button.is-close {
+      position: fixed;
+    }
+  }
+}
+
+// Slider-swiper
+.swiper {
+  &--overwrap {
+    margin : -15px;
+    padding: 15px;
+  }
+
+  &-pagination {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    position       : static;
+
+    &-bullet {
+      width           : 8px;
+      height          : 8px;
+      border-radius   : 0;
+      margin-inline   : 6px !important;
+      background-color: currentColor;
+      transition      : background-color 0.2s ease;
+    }
+  }
+
+  &-button {
+
+    &-prev,
+    &-next {
+      &::after {
+        display: none;
+      }
+    }
+
+    &-prev:not(.default),
+    &-next:not(.default) {
+      width        : 50px;
+      height       : 50px;
+      position     : absolute;
+      border-radius: 50%;
+    }
+
+    @media(min-width: $xl) {
+      &-prev:not(.default) {
+        left: -25px;
+      }
+
+      &-next:not(.default) {
+        right: -25px;
+      }
+    }
+  }
+}

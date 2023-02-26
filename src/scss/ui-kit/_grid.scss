@@ -1,0 +1,32 @@
+// Сетка
+.grid {
+  display              : grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-flow       : row dense;
+
+  &--rows {
+    grid-auto-rows: 40px;
+  }
+}
+
+// Столбцы
+.col {
+  @include getMedia {
+    @for $i from 1 through 12 {
+      &-#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+  }
+}
+
+// Строки
+.row {
+  @include getMedia {
+    @for $i from 1 through 12 {
+      &-#{$i} {
+        grid-row: span #{$i};
+      }
+    }
+  }
+}

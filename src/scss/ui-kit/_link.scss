@@ -1,0 +1,13 @@
+// Ссылка
+.link {
+  text-underline-offset: 4px;
+  cursor               : pointer;
+
+  @media(hover) {
+
+    &:hover,
+    &-wrapper:hover & {
+      text-decoration: underline;
+    }
+  }
+}

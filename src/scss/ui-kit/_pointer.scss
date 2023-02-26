@@ -1,0 +1,12 @@
+// Курсор
+.pointer {
+  cursor: pointer;
+
+  &-all {
+    pointer-events: all;
+  }
+
+  &-none {
+    pointer-events: none;
+  }
+}

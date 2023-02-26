@@ -1,0 +1,15 @@
+// Фон
+.bg {
+  &-block {
+    position: absolute;
+    inset   : 0;
+    overflow: hidden;
+  }
+
+  @each $key,
+  $value in $colors {
+    &-#{$key} {
+      background-color: var(--color-#{$key});
+    }
+  }
+}

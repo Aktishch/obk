@@ -1,0 +1,40 @@
+// Контейнер
+.container {
+  --padding-block : 50px;
+  --padding-inline: 100vw - 30px;
+  padding         : var(--padding-block) calc(50% - ((var(--padding-inline)) / 2));
+
+  @media(min-width: $sm) {
+    &--sm {
+      --padding-inline: var(--sm);
+    }
+  }
+
+  @media(min-width: $md) {
+    & {
+      --padding-block : 60px;
+      --padding-inline: var(--md);
+    }
+  }
+
+  @media(min-width: $lg) {
+    & {
+      --padding-block : 70px;
+      --padding-inline: var(--lg);
+    }
+  }
+
+  @media(min-width: $xl) {
+    & {
+      --padding-block : 80px;
+      --padding-inline: var(--xl);
+    }
+  }
+
+  @media(min-width: $xxl) {
+    & {
+      --padding-block : 100px;
+      --padding-inline: var(--xxl);
+    }
+  }
+}

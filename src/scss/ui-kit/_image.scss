@@ -1,0 +1,70 @@
+// Упаковка
+.pack {
+  display : block;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+  }
+
+  &--half::before {
+    padding-top: 50%;
+  }
+
+  &--rect::before {
+    padding-top: 75%;
+  }
+
+  &--box::before {
+    padding-top: 100%;
+  }
+
+  &--photo::before {
+    padding-top: 125%;
+  }
+}
+
+// Изображение
+.image {
+  position : absolute;
+  inset    : 0;
+  max-width: none;
+  width    : 100%;
+  height   : 100%;
+
+  &:not(&--sd) {
+    object-fit: cover;
+  }
+
+  &--sd {
+    object-fit: scale-down;
+  }
+
+  &--tl {
+    object-position: top left;
+  }
+
+  &--tr {
+    object-position: top right;
+  }
+
+  &--bl {
+    object-position: bottom left;
+  }
+
+  &--br {
+    object-position: bottom right;
+  }
+
+  &--rise {
+    transition: transform 0.3s linear;
+  }
+
+  @media(hover) {
+    &--rise:hover {
+      transform: scale(1.1);
+    }
+  }
+}
