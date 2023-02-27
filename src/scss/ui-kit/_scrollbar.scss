@@ -2,90 +2,23 @@
 * {
   scrollbar: {
     width: thin;
-    color: var(--color-primary) var(--color-black-dark);
+    color: var(--color-primary) var(--color-primary);
   }
 
   &::-webkit-scrollbar {
     @media(pointer: fine) {
-      width: 16px;
+      width: 12px;
 
       &-track {
-        background-color: var(--color-black-dark);
-
-        &-piece {
-          margin-block: 8px;
-        }
+        background-color: var(--color-grey);
       }
 
       &-thumb {
         background-color: var(--color-primary);
-
-        border: {
-          width : 4px;
-          style : solid;
-          color : var(--color-black-dark);
-          radius: 8px;
-        }
-
-        &:active {
-          box-shadow: inset 0 8px 8px var(--color-black-50);
-        }
-
       }
 
       &-corner {
-        background-color: var(--color-black-dark);
-      }
-
-      &-button {
         background-color: var(--color-primary);
-
-        &:vertical {
-          &:decrement:start {
-            background-image: linear-gradient(120deg, var(--color-black-dark) 35%, var(--color-none) 41%),
-              linear-gradient(240deg, var(--color-black-dark) 35%, var(--color-none) 41%),
-              linear-gradient(0deg, var(--color-black-dark) 35%, var(--color-none) 41%);
-          }
-
-          &:increment:end {
-            background-image: linear-gradient(300deg, var(--color-black-dark) 35%, var(--color-none) 41%),
-              linear-gradient(60deg, var(--color-black-dark) 35%, var(--color-none) 41%),
-              linear-gradient(180deg, var(--color-black-dark) 35%, var(--color-none) 41%);
-          }
-
-          &:increment:start,
-          &:decrement:end {
-            display: none;
-          }
-        }
-
-        &:horizontal {
-          &:decrement:start {
-            background-image: linear-gradient(30deg, var(--color-black-dark) 35%, var(--color-none) 41%),
-              linear-gradient(150deg, var(--color-black-dark) 35%, var(--color-none) 41%),
-              linear-gradient(-90deg, var(--color-black-dark) 35%, var(--color-none) 41%);
-          }
-
-          &:increment:end {
-            background-image: linear-gradient(210deg, var(--color-black-dark) 35%, var(--color-none) 41%),
-              linear-gradient(330deg, var(--color-black-dark) 35%, var(--color-none) 41%),
-              linear-gradient(90deg, var(--color-black-dark) 35%, var(--color-none) 41%);
-          }
-
-          &:increment:start,
-          &:decrement:end {
-            display: none;
-          }
-        }
-      }
-    }
-
-    @media(hover) {
-
-      &-thumb:hover,
-      &-button:vertical:hover,
-      &-button:horizontal:hover {
-        background-color: var(--color-primary-dark);
       }
     }
   }

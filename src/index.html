@@ -314,4 +314,20 @@
   </a>
 </section>
 
+<!-- Города -->
+
+<section class="cities container overflow-hidden">
+  <h2 class="cities__title text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5">
+    <span class="zoom-2">
+      МЫ <span class="color-primary">РЯДОМ</span>
+    </span>
+  </h2>
+  <h3 class="text text--center text-14 text-md-18 text-lg-24 bold-3 lh-5 mb-5 mb-md-10">
+    Выберите ближайший к вам склад <br class="d-block d-md-none"> в Санкт-Петербурге <br class="d-none d-md-block"> или п. Волома.
+    <br class="d-block d-md-none"><span class="bold-5">Отгружаем в день заказа!</span>
+  </h3>
+  <%= require('./includes/map.html').default %>
+  <button class="cities__btn btn btn--primary btn--lg btn--fill text-md-18 text-lg-20 w-lg-100 mx-auto mt-10" data-waved>Подробнее <span class="d-none d-md-inline">о доставке</span></button>
+</section>
+
 <%= require('./includes/footer.html').default %>

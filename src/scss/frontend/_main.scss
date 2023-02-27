@@ -534,3 +534,127 @@
     }
   }
 }
+
+// Города
+.cities {
+  &__btn {
+    max-width: 415px;
+  }
+
+  @media(min-width: $xxl) {
+    &__title {
+      font-size: var(--text-42);
+    }
+  }
+
+  @media(max-width: $md) {
+    & {
+      padding-top: 20px;
+    }
+  }
+}
+
+// Карта
+.map {
+  min-width: 1524px;
+
+  &__geo {
+    top : 480px;
+    left: 115px;
+  }
+
+  &__line {
+    border-top: 12px solid var(--color-white);
+
+    &--1 {
+      top         : -17px;
+      left        : 23px;
+      border-right: 390px solid var(--color-none);
+      width       : 390px;
+      transform   : rotate(-7deg);
+    }
+
+    &--2 {
+      top         : 27px;
+      left        : 21px;
+      border-right: 100px solid var(--color-none);
+      width       : 100px;
+      transform   : rotate(15deg);
+    }
+
+    &--3 {
+      top         : 53px;
+      left        : -2px;
+      border-right: 80px solid var(--color-none);
+      width       : 80px;
+      transform   : rotate(60deg);
+    }
+  }
+
+  &__item {
+    height: 52px;
+
+    &--1 {
+      top : 425px;
+      left: -18px;
+    }
+
+    &--2 {
+      top : 425px;
+      left: 510px;
+    }
+
+    &--3 {
+      top : 502px;
+      left: 236px;
+    }
+
+    &--4 {
+      top : 570px;
+      left: 80px;
+    }
+  }
+
+  &__text {
+    left  : 0;
+    right : 0;
+    top   : 100%;
+    height: 32px;
+
+    border-top: {
+      right-radius: 0;
+      left-radius : 0;
+    }
+  }
+
+  @media(max-width: $xxl) {
+    & {
+      transform   : scale(0.8);
+      margin-left : -150px;
+      margin-block: -50px;
+    }
+  }
+
+  @media(max-width: $xl) {
+    & {
+      margin-left : -180px;
+      margin-block: -80px;
+    }
+  }
+
+  @media(max-width: $lg) {
+    & {
+      transform   : scale(0.6);
+      margin-block: -150px;
+      margin-left : -320px;
+    }
+  }
+
+  @media(max-width: $md) {
+    & {
+      transform   : scale(0.5);
+      margin-block: -180px;
+      margin-left : -390px;
+    }
+  }
+}

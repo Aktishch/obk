@@ -14,33 +14,6 @@
     width   : 100%;
   }
 
-  &-icon {
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-    position       : absolute;
-    top            : 0;
-    bottom         : 0;
-    width          : var(--size-lg);
-    height         : var(--size-lg);
-
-    &:not(&--pointer) {
-      pointer-events: none;
-    }
-
-    &--pointer {
-      pointer-events: all;
-    }
-
-    &--left {
-      left: 0;
-    }
-
-    &--right {
-      right: 0;
-    }
-  }
-
   &-error {
     display         : flex;
     align-items     : center;

@@ -7,7 +7,7 @@
 
 // Создание переменных цвета с разной прозрачностью
 @mixin getColors($color, $name) {
-  @if ($name=="none"or $name=="red"or $name=="green") {
+  @if ($name=="none"or $name=="red") {
     --color-#{$name}: #{$color};
   }
 
