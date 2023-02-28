@@ -1,0 +1,167 @@
+<% var data = {
+
+  title: 'Производство',
+  status: 'production'
+
+} %>
+
+<%= _.template(require('./includes/header.html').default)({data}) %>
+
+<!-- Совершенство -->
+
+<section class="perfection container relative">
+  <div class="bg-block overflow-visible">
+    <picture>
+      <source srcset="img/pictures/bg-4.webp" type="image/webp">
+      <img class="perfection__bg absolute w-100" src="img/pictures/bg-4.png" alt="">
+    </picture>
+  </div>
+  <div class="relative">
+    <h2 class="perfection__title flex flex-wrap align-end text text--uppercase text-16 text-md-26 bold-4 lh-2">
+      <span class="zoom-2">
+        <span class="color-primary">ОБК —</span> 13 ЛЕТ
+      </span>
+      <p class="perfection__text d-none d-md-block text-14 text-md-16 text-lg-20 bold-4 lh-5 fade-20 mb-md-5">производим все виды оконного бруса</p>
+    </h2>
+    <div class="perfection__content flex">
+      <a class="perfection__pack pack pack--box order-2 order-md-1 bg-grey radius-max w-100 h-max mr-md-5 mr-md-10" data-waved data-fancybox-dialog href="img/pictures/video.png">
+        <div class="loader">
+          <span class="loader-progress">
+            <svg class="loader-icon icon">
+              <use xlink:href="img/icons.svg#loader">
+            </svg>
+          </span>
+        </div>
+        <picture>
+          <source srcset="img/pictures/video.webp" type="image/webp">
+          <img class="image" loading="lazy" src="img/pictures/video.png" alt="">
+        </picture>
+        <div class="bg-block flex align-center justify-center">
+          <button class="perfection__play btn btn--second btn--fill text-28 radius-max">
+            <svg class="icon ml-1">
+              <use xlink:href="img/icons.svg#play">
+            </svg>
+          </button>
+        </div>
+      </a>
+      <div class="flex flex-column order-1 order-md-2">
+        <h2 class="perfection__subtitle text text--uppercase text-16 text-md-26 bold-4 lh-2 mb-10 pb-lg-10">
+          <span class="zoom-2">
+            НЕПРЕРЫВНОГО <br>
+            СОВЕРШЕНСТВА
+          </span>
+        </h2>
+        <a class="perfection__btn d-none d-md-flex btn btn--primary btn--lg btn--fill text-md-18 text-lg-20 w-max" data-waved data-fancybox-dialog href="img/pictures/video.png">Посмотреть видео <span class="d-none d-md-inline">о компании</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- О нас -->
+
+<% var about = [
+  {
+    number: '13',
+    step: '1',
+    subtitle: 'лет',
+    text: 'на рынке'
+  },
+  {
+    number: '3',
+    step: '1',
+    subtitle: 'га',
+    text: 'лесопильная <br> площадка'
+  },
+  {
+    number: '5000',
+    step: '100',
+    subtitle: 'м<sup>2</sup>',
+    text: 'производственных <br> площадей'
+  },
+  {
+    number: '600',
+    step: '10',
+    subtitle: 'м<sup>3</sup>',
+    text: 'материала <br> производим в месяц'
+  }
+] %>
+
+<section class="about container container--sm">
+  <h2 class="about__title text text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5">
+    <span class="zoom-2">
+      <span class="color-primary">О</span> КОМПАНИИ
+    </span>
+  </h2>
+  <p class="about__text text-16 text-md-20 text-lg-24 bold-3 lh-5 mb-5 mb-md-10">
+    <span class="bold-5">ОБК - лидер по объёму продаж оконного бруса</span><br class="d-none d-md-block">
+    в Санкт-Петербурге и Ленинградской области, <br class="d-none d-md-block">
+    один из крупнейших производителей России.
+  </p>
+  <div class="grid d-grid d-lg-flex justify-between gap-md-5">
+    <% for (var i = 0; i < about.length; i++) { %>
+      <div class="col-6 flex flex-column align-center mt-2 mt-md-0">
+        <h4 class="about__number flex align-center justify-center color-primary text text--center text--uppercase text-24 text-md-36 text-lg-50 bold-2 w-0">
+          <span class="zoom-2 lh-1" data-number="<%= about[i].number %>" data-number-step="<%= about[i].step %>" data-number-time="2"><%= about[i].number %></span>
+        </h4>
+        <div class="flex flex-column align-center">
+          <div class="flex align-center mb-3">
+            <div class="icon bg-primary text-14 text-md-20 mr-3 mr-md-5"></div>
+            <span class="color-primary text text--center text-18 text-md-36 text-lg-50 bold-4 lh-1"><%= about[i].subtitle %></span>
+          </div>
+          <p class="text text--center text-14 text-md-18 text-lg-24 bold-4 lh-8"><%= about[i].text %></p>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+<!-- Необходимое -->
+
+<section class="necessary container relative">
+  <h2 class="necessary__title flex justify-end text text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 mb-md-10">
+    <div class="flex flex-column zoom-2">
+      <span class="color-primary">ВСЕ НЕОБХОДИМОЕ</span>
+      <span>ДЛЯ ЛИДЕРСТВА</span>
+      <span class="ml-lg-10 pl-lg-10">НА РОССИЙСКОМ РЫНКЕ</span>
+    </div>
+  </h2>
+  <div class="necessary__items flex flex-column align-end relative">
+    <div class="necessary__item flex">
+      <div class="icon bg-primary text-14 text-md-20 text-lg-26 mt-2 mr-3 mr-md-10"></div>
+      <div class="flex flex-column">
+        <h3 class="text-18 text-md-24 text-lg-30 bold-4 lh-4 mb-5 mb-md-8">
+          Лесопильный комплекс <br>
+          до 1000 м<sup>3</sup> в месяц
+        </h3>
+        <p class="text-16 text-md-18 text-lg-20 bold-4">
+          Современное ленточнопильное и круглопильное <br class="d-none d-md-block">
+          оборудование “такого-то” производства. Каждый <br class="d-none d-md-block">
+          диаметр распиливается по индивидуальной схеме для <br class="d-none d-md-block">
+          обеспечения максимально полезного выхода <br class="d-none d-md-block">
+          радиального и тангенциального распила, а также <br class="d-none d-md-block">
+          требуемой геометрии и качества.
+        </p>
+      </div>
+    </div>
+    <div class="necessary__item flex">
+      <div class="icon bg-primary text-14 text-md-20 text-lg-26 mt-2 mr-3 mr-md-10"></div>
+      <div class="flex flex-column">
+        <h3 class="text-18 text-md-24 text-lg-30 bold-4 lh-4 mb-5 mb-md-8">
+          Сушильный комплекс до 600 <br>
+          м<sup>3</sup> пиломатериала в месяц
+        </h3>
+        <p class="text-16 text-md-18 text-lg-20 bold-4">
+          Правильно формируем сушильные пакеты на калиброванные <br class="d-none d-md-block">
+          прокладки 25*40мм, что даёт одинаковое расстояние между <br class="d-none d-md-block">
+          досками и обеспечивает сквозной продув. Сушка осуществляется <br class="d-none d-md-block">
+          в «мягком» режиме, в течении 12-14 дней до влажности 10-12 %. <br class="d-none d-md-block">
+          Затем проводится охлаждение древесины с помощью <br class="d-none d-md-block">
+          вентиляторов в течение суток, что приводит к равномерному <br class="d-none d-md-block">
+          распределению и выделению остатка влаги на поверхность доски.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= require('./includes/footer.html').default %>

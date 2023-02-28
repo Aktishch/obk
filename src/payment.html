@@ -1,0 +1,146 @@
+<% var data = {
+
+  title: 'Доставка и оплата',
+  status: 'payment'
+
+} %>
+
+<%= _.template(require('./includes/header.html').default)({data}) %>
+
+<!-- Лес -->
+
+<section class="forest container relative">
+  <div class="forest__bg bg-block">
+    <div class="pack pack--rect bg-grey w-100 h-100">
+      <div class="loader">
+        <span class="loader-progress">
+          <svg class="loader-icon icon">
+            <use xlink:href="img/icons.svg#loader">
+          </svg>
+        </span>
+      </div>
+      <picture>
+        <source srcset="img/pictures/forest.webp" type="image/webp">
+        <img class="image" loading="lazy" src="img/pictures/forest.jpg" alt="">
+      </picture>
+    </div>
+  </div>
+  <div class="relative zi-1">
+    <h2 class="forest__title text text--uppercase text-12 text-md-26 bold-4 lh-2 mb-5 mb-md-8">
+      <span class="zoom-2">
+        <span class="color-primary">ИЗ СЕРДЦА КАРЕЛИИ —</span> <br>
+        В ЛЮБУЮ ТОЧКУ МИРА
+      </span>
+    </h2>
+    <div class="forest__text flex align-center">
+      <div class="icon bg-primary text-16 text-md-20 mr-4 mr-md-8"></div>
+      <h3 class="text-14 text-md-22 text-lg-30 bold-4 lh-3">Заказать также просто, как и в любимом онлайн-магазине</h3>
+    </div>
+  </div>
+</section>
+
+<!-- Склады -->
+
+<section class="warehouses container overflow-hidden">
+  <div class="warehouses__top flex align-stretch justify-between">
+    <h2 class="warehouses__title text text--uppercase text-12 text-md-26 bold-4 lh-2">
+      <span class="zoom-2">
+        <span class="color-primary">СКЛАДЫ</span> <br>
+        В САНКТ-ПЕТЕРБУРГЕ <br>
+        И П. ВОЛОМА
+      </span>
+    </h2>
+    <div class="warehouses__content flex flex-column align-end h-100">
+      <div class="warehouses__square icon bg-primary text-16 text-md-20"></div>
+      <h3 class="warehouses__text text text--right text-14 text-md-18 text-lg-26 bold-3 lh-5">
+        <span class="bold-5">В постоянном наличии более <br class="d-none d-lg-block">
+          80 м3 клееного бруса 1 и 3 <br class="d-none d-lg-block">
+          категории</span> готового к отправке <br class="d-none d-lg-block">
+          на ваше производство.
+      </h3>
+    </div>
+  </div>
+  <%= require('./includes/map.html').default %>
+  <button class="warehouses__btn btn btn--primary btn--lg btn--fill text-md-18 text-lg-20 w-lg-100 mx-auto mt-10" data-waved>Подробнее <span class="d-none d-md-inline">о доставке</span></button>
+</section>
+
+<!-- Отгрузка -->
+
+<section class="shipment container relative">
+  <div class="shipment__bg bg-block">
+    <div class="pack pack--rect w-100 h-100">
+      <div class="loader">
+        <span class="loader-progress">
+          <svg class="loader-icon icon">
+            <use xlink:href="img/icons.svg#loader">
+          </svg>
+        </span>
+      </div>
+      <picture>
+        <source srcset="img/pictures/shipment.webp" type="image/webp">
+        <img class="image" loading="lazy" src="img/pictures/shipment.jpg" alt="">
+      </picture>
+    </div>
+  </div>
+  <div class="shipment__content relative text text--right">
+    <h2 class="shipment__title text text--uppercase text-12 text-md-26 bold-4 lh-2 mb-5 mb-md-8">
+      <span class="zoom-2">
+        ОТГРУЖАЕМ <br class="d-block d-lg-none"> <span class="color-primary">В ДЕНЬ ЗАКАЗА</span>
+      </span>
+    </h2>
+    <h3 class="shipment__subtitle flex align-center justify-end mb-3 mb-md-8">
+      <div class="icon bg-primary text-16 text-md-20 mr-4 mr-md-8"></div>
+      <span class="text-14 text-md-18 text-lg-26 bold-5 lh-5">Работаем со всеми транспортными компаниями.</span>
+    </h3>
+    <p class="text-14 text-md-18 text-lg-26 bold-3 lh-5">
+      Подберем лучшую или наладим контакт с вашей. <br>
+      По запросу организуем доставку “от двери до двери”.
+    </p>
+  </div>
+</section>
+
+<!-- Оплата -->
+
+<section class="payment container relative overflow-hidden">
+  <h2 class="payment__title text text--uppercase text-12 text-md-26 bold-4 lh-2 mb-10">
+    <span class="zoom-2">
+      <span class="color-primary">УДОБНАЯ</span><br class="d-block d-lg-none"> ФОРМА ОПЛАТЫ
+    </span>
+  </h2>
+  <div class="payment__items grid relative w-100">
+    <div class="col-12 col-lg-6 mb-10 mb-lg-0">
+      <div class="payment__item relative bg-primary color-white h-100 py-7 px-5 py-lg-10 px-lg-10">
+        <div class="payment__circle flex align-center justify-center absolute bg-white color-primary text-18 text-lg-34 radius-max">+</div>
+        <h4 class="payment__subtitle text text--uppercase text-18 text-md-28 text-lg-38 bold-3 lh-5 mb-3 mb-md-6">Работаем как с НДС, так и без него.</h4>
+        <p class="text-16 text-md-18 text-lg-22 bold-3 lh-7 pl-lg-8">
+          Безналичный и наличный расчет. <br>
+          Онлайн-оплата банковскими картами.
+        </p>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="payment__item relative bg-grey h-100 py-7 px-5 py-lg-10 px-lg-10">
+        <div class="payment__circle flex align-center justify-center absolute bg-primary color-white text-18 text-lg-34 radius-max">+</div>
+        <h4 class="payment__subtitle text text--uppercase text-18 text-md-28 text-lg-38 bold-3 lh-5 mb-3 mb-md-6">Отсрочка <br class="d-none d-lg-block">платежа</h4>
+        <p class="text-16 text-md-18 text-lg-22 bold-3 lh-7 pl-lg-8">
+          до 14 дней  <br>
+          с первого заказа.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="payment__pack payment__pack--1 pack pack--box d-none d-md-block absolute w-100 ease duration-5 delay-3">
+    <picture>
+      <source srcset="img/pictures/payment-1.webp" type="image/webp">
+      <img class="image image--sd" loading="lazy" src="img/pictures/payment-1.png" alt="">
+    </picture>
+  </div>
+  <div class="payment__pack payment__pack--2 pack pack--box d-none d-md-block absolute fade-0 w-100 ease duration-5 delay-3">
+    <picture>
+      <source srcset="img/pictures/payment-2.webp" type="image/webp">
+      <img class="image image--sd" loading="lazy" src="img/pictures/payment-2.png" alt="">
+    </picture>
+  </div>
+</section>
+
+<%= require('./includes/footer.html').default %>

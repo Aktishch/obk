@@ -23,7 +23,7 @@ import listing from './ts/listing'
 // import formatBg from './ts/format-bg'
 // import parallax from './ts/parallax'
 // import filter from './ts/filter'
-// import outNumber from './ts/out-number'
+import outNumber from './ts/out-number'
 // import writeText from './ts/write-text'
 // import formSubmit from './ts/form-submit'
 // import formSave from './ts/form-save'
@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // formatBg.init()
   // parallax.init()
   // filter.init()
-  // outNumber.init()
+  outNumber.init()
   // writeText.init()
   // formSubmit.init()
   // formSave.init()
