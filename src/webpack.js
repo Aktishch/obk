@@ -14,7 +14,7 @@ import mobileMenu from './ts/mobile-menu'
 // import draggable from './ts/draggable'
 // import theme from './ts/theme'
 // import snowflakes from './ts/snowflakes'
-// import animation from './ts/animation'
+import animation from './ts/animation'
 import waved from './ts/waved'
 // import movement from './ts/movement'
 // import bubbles from './ts/bubbles'
@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // draggable.init()
   // theme.init()
   // snowflakes.init()
-  // animation.init()
+  animation.init()
   waved.init()
   // movement.init()
   // bubbles.init()

@@ -26,21 +26,13 @@ const animationOnScroll = (): void => {
 
     const height: number = item.offsetHeight
     const offsetTop: number = setOffset(item).top
-    const screenPosition: number = 4
+    const screenPosition: number = 2
 
     let point: number = window.innerHeight - height / screenPosition
 
     if (point > window.innerHeight) point = window.innerHeight - window.innerHeight / screenPosition
 
-    if (scrolledPage.init().top > offsetTop - point && scrolledPage.init().top < offsetTop + height) {
-
-      item.dataset.anim = 'show'
-
-    } else {
-
-      item.dataset.anim = 'hidden'
-
-    }
+    if (scrolledPage.init().top > offsetTop - point && scrolledPage.init().top < offsetTop + height) item.dataset.anim = 'show'
 
   })
 

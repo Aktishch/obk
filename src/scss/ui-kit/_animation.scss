@@ -23,22 +23,38 @@
   }
 
   &--up:not([data-anim="show"]) {
-    transform: translateY(50px);
+    transform: translateY(100px);
     opacity  : 0;
+
+    @media(max-width: $md) {
+      transform: translateY(50px);
+    }
   }
 
   &--down:not([data-anim="show"]) {
-    transform: translateY(-50px);
+    transform: translateY(-100px);
     opacity  : 0;
+
+    @media(max-width: $md) {
+      transform: translateY(-50px);
+    }
   }
 
   &--left:not([data-anim="show"]) {
-    transform: translateX(50px);
+    transform: translateX(100px);
     opacity  : 0;
+
+    @media(max-width: $md) {
+      transform: translateX(50px);
+    }
   }
 
   &--right:not([data-anim="show"]) {
-    transform: translateX(-50px);
+    transform: translateX(-100px);
     opacity  : 0;
+
+    @media(max-width: $md) {
+      transform: translateX(-50px);
+    }
   }
 }

@@ -13,55 +13,75 @@
   <div class="bg-block overflow-visible">
     <picture>
       <source srcset="img/pictures/bg-1.webp" type="image/webp">
-      <img class="main__bg main__bg--1 absolute w-100" src="img/pictures/bg-1.png" alt="">
+      <img class="main__bg main__bg--1 absolute w-100 ease duration-7 anim anim--down" data-anim="hidden" src="img/pictures/bg-1.png" alt="">
     </picture>
     <picture>
       <source srcset="img/pictures/bg-2.webp" type="image/webp">
-      <img class="main__bg main__bg--2 absolute w-100" src="img/pictures/bg-2.png" alt="">
+      <img class="main__bg main__bg--2 absolute w-100 ease duration-7 anim anim--up" data-anim="hidden" src="img/pictures/bg-2.png" alt="">
     </picture>
   </div>
   <div class="relative">
-    <h3 class="main__subtitle text text--center text-14 text-md-16 text-lg-20 bold-4 lh-5 fade-20">производим все виды оконного бруса</h3>
+    <h3 class="main__subtitle text text--center text-14 text-md-16 text-lg-20 bold-4 lh-5 fade-20 ease-in-out duration-5 anim anim--up" data-anim="hidden">производим все виды оконного бруса</h3>
     <h1 class="flex flex-column text-18 text-md-26 text-lg-46">
-      <div class="main__title text text--center text--uppercase bold-4 lh-2 zoom-4">ОКОННЫЙ <span class="color-primary">БРУС</span></div>
+      <div class="main__title text text--center text--uppercase bold-4 lh-2 zoom-4 ease-in-out duration-5 delay-2 anim anim--up" data-anim="hidden">ОКОННЫЙ <span class="color-primary">БРУС</span></div>
       <div class="flex flex-wrap align-center justify-center gap-10">
-        <span class="main__text d-none d-lg-block text-24 bold-4 lh-5 fade-10">
+        <span class="main__text d-none d-lg-block text-24 bold-4 lh-5 fade-10 ease-in-out duration-5 delay-6 anim anim--down" data-anim="hidden">
           Тут нужен какой-то <br>
           текст для того, чтобы <br>
           закрыть левую точку
         </span>
-        <span class="main__title text text--center text--uppercase bold-4 lh-2 zoom-4">КАРЕЛИИ</span>
-        <div class="main__text d-none d-lg-block text-30 bold-4 lh-5">
+        <span class="main__title text text--center text--uppercase bold-4 lh-2 zoom-4 ease-in-out duration-5 delay-4 anim anim--up" data-anim="hidden">КАРЕЛИИ</span>
+        <div class="main__text d-none d-lg-block text-30 bold-4 lh-5 ease-in-out duration-5 delay-6 anim anim--down" data-anim="hidden">
           <span class="fade-20">напрямую</span><br>
           <span class="fade-20">от производителя</span><br>
           <span>от 58 000 руб/м3</span>
         </div>
       </div>
     </h1>
-    <button class="main__btn btn btn--primary btn--lg btn--fill text-md-18 text-lg-22 w-100" data-waved>Перейти в каталог</button>
+    <div class="w-100 ease-in-out duration-5 delay-6 anim anim--up" data-anim="hidden">
+      <button class="main__btn btn btn--primary btn--lg btn--fill text-md-18 text-lg-22 w-100" data-waved>Перейти в каталог</button>
+    </div>
   </div>
 </main>
 
 <!-- Выгода -->
 
+<% var about = [
+  {
+    item: '',
+    data: '',
+    img: '1'
+  },
+  {
+    item: 'd-none d-md-block mt-8 mt-lg-0 delay-lg-2',
+    data: 'data-listing-item',
+    img: '2'
+  },
+  {
+    item: 'd-none d-md-block mt-8 mt-lg-0 delay-lg-4',
+    data: 'data-listing-item',
+    img: '3'
+  },
+] %>
+
 <section class="benefit container container--sm relative" data-listing>
   <div class="benefit__content mb-5 mb-md-10">
-    <h3 class="benefit__subtitle text text--center text-14 text-md-16 bold-5 lh-5 fade-10 mb-2">какой-то подзаголовок сделать ещё</span>
-    <h2 class="benefit__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5">
+    <h3 class="benefit__subtitle text text--center text-14 text-md-16 bold-5 lh-5 fade-10 mb-2 ease-in-out duration-5 anim anim--up" data-anim="hidden">какой-то подзаголовок сделать ещё</span>
+    <h2 class="benefit__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
       <span class="zoom-2">
         ВЫГОДНЫЕ <br class="d-none d-md-block">
         <span class="color-primary">ПРЕДЛОЖЕНИЯ</span><br class="d-none d-md-block">
         <span class="pl-lg-10 ml-lg-5">ДЕКАБРЯ</span>
       </span>
     </h2>
-    <p class="benefit__text text text--center text-16 text-md-20 text-lg-26 bold-3 lh-4 pl-lg-10 ml-lg-5">
+    <p class="benefit__text text text--center text-16 text-md-20 text-lg-26 bold-3 lh-4 pl-lg-10 ml-lg-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
       <span class="bold-5">Зарабатывайте больше</span> <br>
       за счет снижения закупочных цен
     </p>
   </div>
   <div class="grid gap-lg-9 pt-lg-5">
-    <% for (var i = 1; i < 4; i++) { %>
-      <div class="col-12 col-lg-4 <%= i == 1 ? '' : 'd-none d-md-block mt-8 mt-lg-0' %>" <%= i == 1 ? '' : 'data-listing-item' %>>
+    <% for (var i = 0; i < about.length; i++) { %>
+      <div class="col-12 col-lg-4 <%= about[i].item %> ease-in-out duration-5 anim anim--up" data-anim="hidden" <%= about[i].data %>>
         <div class="benefit__card card link-wrapper border h-100" data-waved>
           <div class="benefit__pack pack pack--rect bg-grey w-100">
             <div class="loader">
@@ -72,8 +92,8 @@
               </span>
             </div>
             <picture>
-              <source srcset="img/pictures/benefit-<%= i %>.webp" type="image/webp">
-              <img class="image image--rise" loading="lazy" src="img/pictures/benefit-<%= i %>.jpg" alt="">
+              <source srcset="img/pictures/benefit-<%= about[i].img %>.webp" type="image/webp">
+              <img class="image image--rise" loading="lazy" src="img/pictures/benefit-<%= about[i].img %>.jpg" alt="">
             </picture>
           </div>
           <div class="card-content py-5 px-4 px-lg-0 py-md-10">
@@ -95,13 +115,36 @@
       </div>
     <% } %>
   </div>
-  <button class="btn btn--primary btn--lg btn--fill d-md-none mx-auto mt-10" data-waved data-listing-show>Показать ёще</button>
+  <div class="ease-in-out duration-5 anim anim--up" data-anim="hidden">
+    <button class="btn btn--primary btn--lg btn--fill d-md-none mx-auto mt-10" data-waved data-listing-show>Показать ёще</button>
+  </div>
 </section>
 
 <!-- Наличие -->
 
+<% var availability = [
+  {
+    item: '',
+    data: '',
+    img: '1',
+    text: 'Брус клееный <br>(сосна)'
+  },
+  {
+    item: 'd-none d-md-grid mt-5 mt-md-8 delay-1',
+    data: 'data-listing-item',
+    img: '2',
+    text: 'Доска массив <br>(сосна)'
+  },
+  {
+    item: 'd-none d-md-grid mt-5 mt-md-8 delay-2',
+    data: 'data-listing-item',
+    img: '3',
+    text: 'Доска <br>сращенная'
+  },
+] %>
+
 <section class="availability container">
-  <h2 class="availability__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 mb-md-10">
+  <h2 class="availability__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 mb-md-10 ease-in-out duration-5 anim anim--up" data-anim="hidden">
     <span class="zoom-2">
       <span class="color-primary">В ПОСТОЯННОМ <br class="d-none d-md-block">
       <span class="pl-lg-10 ml-lg-9">НАЛИЧИИ</span></span><br class="d-block d-md-none">
@@ -109,25 +152,17 @@
     </span>
   </h2>
   <div class="flex flex-column" data-listing>
-    <% for (var i = 1; i < 4; i++) { %>
-      <div class="availability__card card grid <%= i == 1 ? '' : 'd-none d-md-grid mt-5 mt-md-8' %>" <%= i == 1 ? '' : 'data-listing-item' %> data-waved>
+    <% for (var i = 0; i < availability.length; i++) { %>
+      <div class="availability__card card grid <%= availability[i].item %> ease-in-out duration-5 anim anim--right" data-anim="hidden" <%= availability[i].data %> data-waved>
         <div class="col-6 flex align-center bg-primary">
           <div class="availability__pack pack pack--rect w-100">
             <picture>
-              <source srcset="img/pictures/availability-<%= i %>.webp" type="image/webp">
-              <img class="image image--sd image--tl" src="img/pictures/availability-<%= i %>.png" alt="">
+              <source srcset="img/pictures/availability-<%= availability[i].img %>.webp" type="image/webp">
+              <img class="image image--sd image--tl" src="img/pictures/availability-<%= availability[i].img %>.png" alt="">
             </picture>
           </div>
           <div class="flex flex-column py-3 px-3 py-md-10 px-md-5 px-lg-7">
-            <h4 class="availability__text color-white text text--uppercase text-20 text-md-38 lh-4">
-              <% if (i == 1) { %>
-                <%= 'Брус клееный <br>(сосна)' %>
-              <% } else if (i == 2) { %>
-                <%= 'Доска массив <br>(сосна)' %>
-              <% } else if (i == 3) { %>
-                <%= 'Доска <br>сращенная' %>
-              <% } %>
-            </h4>
+            <h4 class="availability__text color-white text text--uppercase text-20 text-md-38 lh-4"><%= availability[i].text %></h4>
           </div>
         </div>
         <div class="col-6 availability__content card-content justify-center relative bg-grey overflow-hidden pt-5 pb-10 pt-md-10 px-5 px-lg-5">
@@ -145,23 +180,50 @@
         </div>
       </div>
     <% } %>
-    <button class="btn btn--primary btn--lg btn--fill d-md-none mx-auto mt-10" data-waved data-listing-show>Показать ёще</button>
+    <div class="ease-in-out duration-5 anim anim--up" data-anim="hidden">
+      <button class="btn btn--primary btn--lg btn--fill d-md-none mx-auto mt-10" data-waved data-listing-show>Показать ёще</button>
+    </div>
   </div>
 </section>
 
 <!-- Ассортимент -->
 
-<% var assortment = ['Дверные коробки', 'Щиты', 'Наличники', 'Половой шпунт', 'Вагонка', 'Имитация бруса'] %>
+<% var assortment = [
+  {
+    item: '',
+    text: 'Дверные коробки'
+  },
+  {
+    item: 'delay-lg-2',
+    text: 'Щиты'
+  },
+  {
+    item: 'delay-lg-4',
+    text: 'Наличники'
+  },
+  {
+    item: '',
+    text: 'Половой шпунт'
+  },
+  {
+    item: 'delay-lg-2',
+    text: 'Вагонка'
+  },
+  {
+    item: 'delay-lg-4',
+    text: 'Имитация бруса'
+  }
+] %>
 
 <section class="assortment container relative">
   <div class="bg-block overflow-visible">
     <picture>
       <source srcset="img/pictures/bg-3.webp" type="image/webp">
-      <img class="assortment__bg absolute w-100" src="img/pictures/bg-3.png" alt="">
+      <img class="assortment__bg absolute w-100 ease-in-out duration-8 anim anim--up" data-anim="hidden" src="img/pictures/bg-3.png" alt="">
     </picture>
   </div>
   <div class="relative">
-    <h2 class="assortment__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 mb-md-10">
+    <h2 class="assortment__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 mb-md-10 ease-in-out duration-5 anim anim--up" data-anim="hidden">
       <span class="zoom-2">
         УДОБНО, <br class="d-block d-md-none">
         ПОТОМУ ЧТО <br>
@@ -169,7 +231,7 @@
     </h2>
     <div class="grid gap-3 gap-md-5 gap-lg-10 pt-lg-5">
       <% for (var i = 0; i < assortment.length; i++) { %>
-        <div class="col-6 col-lg-4">
+        <div class="col-6 col-lg-4 <%= assortment[i].item %> ease-in-out duration-5 anim anim--up" data-anim="hidden">
           <div class="card border h-100" data-waved>
             <div class="pack pack--rect bg-grey">
               <div class="loader">
@@ -185,7 +247,7 @@
               </picture>
             </div>
             <div class="card-content align-center justify-center py-5 py-md-8 px-2">
-              <h4 class="text text--center text--uppercase text-16 text-md-26 text-lg-36 bold-5 mb-md-2"><%= assortment[i] %></h4>
+              <h4 class="text text--center text--uppercase text-16 text-md-26 text-lg-36 bold-5 mb-md-2"><%= assortment[i].text %></h4>
               <button class="assortment__btn btn btn--second text text--center text--underline text-12 text-md-16 text-lg-18 bold-5 radius-1 p-1 mt-auto">Узнать подробнее</button>
             </div>
           </div>
@@ -199,7 +261,7 @@
 
 <section class="reviews container overflow-hidden">
   <div class="reviews-slider relative">
-    <h2 class="reviews__title flex flex-column align-end text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 w-lg-max mb-5 mb-md-10 mr-auto">
+    <h2 class="reviews__title flex flex-column align-end text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 w-lg-max mb-5 mb-md-10 mr-auto ease-in-out duration-5 anim anim--right" data-anim="hidden">
       <div class="flex align-end">
         <div class="reviews__number color-primary">
           <span class="zoom-5 bold-2">950</span>
@@ -262,7 +324,7 @@
 <!-- Производство -->
 
 <section class="production container relative overflow-hidden">
-  <h2 class="production__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 w-md-max">
+  <h2 class="production__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 w-md-max ease-in-out duration-5 anim anim--right" data-anim="hidden">
     <div class="production__top flex align-end">
       <div class="flex align-end">
         <div class="production__number color-primary">
@@ -276,7 +338,7 @@
     <div class="zoom-2 mr-auto">СОВЕРШЕНСТВА</div>
   </h2>
   <div class="production__block flex align-end">
-    <a class="production__pack production__pack--1 pack pack--half bg-grey w-100" data-fancybox href="img/pictures/production-1.jpg">
+    <a class="production__pack production__pack--1 pack pack--half bg-grey w-100 ease-in-out duration-8 anim anim--increase" data-anim="hidden" data-fancybox href="img/pictures/production-1.jpg">
       <div class="loader">
         <span class="loader-progress">
           <svg class="loader-icon icon">
@@ -286,20 +348,22 @@
       </div>
       <picture>
         <source srcset="img/pictures/production-1.webp" type="image/webp">
-        <img class="image image--rise" loading="lazy" src="img/pictures/production-1.jpg" alt="">
+        <img class="image image--rise" src="img/pictures/production-1.jpg" alt="">
       </picture>
     </a>
     <div class="flex flex-column">
-      <p class="text-16 text-md-20 text-lg-26 bold-3 lh-5 mb-5 mb-md-10">
+      <p class="text-16 text-md-20 text-lg-26 bold-3 lh-5 mb-5 mb-md-10 ease-in-out duration-5 anim anim--left" data-anim="hidden">
         На площади 5000 м2 в поселке <br>
         Волома <span class="bold-5">мы осуществляем полный <br>
         цикл производства оконного бруса:</span> <br>
         от лесопиления до логистики.
       </p>
-      <button class="btn btn--primary btn--lg btn--fill text-16 text-md-20 w-max" data-waved>Подробнее <span class="d-none d-md-inline">о производстве</span></button>
+      <div class="ease-in-out duration-5 anim anim--left" data-anim="hidden">
+        <button class="btn btn--primary btn--lg btn--fill text-16 text-md-20 w-max" data-waved>Подробнее <span class="d-none d-md-inline">о производстве</span></button>
+      </div>
     </div>
   </div>
-  <a class="production__pack production__pack--2 pack pack--photo d-none d-lg-block absolute bg-grey w-100" data-fancybox href="img/pictures/production-2.jpg">
+  <a class="production__pack production__pack--2 pack pack--photo d-none d-lg-block absolute bg-grey w-100 ease-in-out duration-8 anim anim--increase" data-anim="hidden" data-fancybox href="img/pictures/production-2.jpg">
     <div class="loader">
       <span class="loader-progress">
         <svg class="loader-icon icon">
@@ -309,7 +373,7 @@
     </div>
     <picture>
       <source srcset="img/pictures/production-2.webp" type="image/webp">
-      <img class="image image--rise" loading="lazy" src="img/pictures/production-2.jpg" alt="">
+      <img class="image image--rise" src="img/pictures/production-2.jpg" alt="">
     </picture>
   </a>
 </section>
@@ -317,17 +381,19 @@
 <!-- Города -->
 
 <section class="cities container overflow-hidden">
-  <h2 class="cities__title text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5">
+  <h2 class="cities__title text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
     <span class="zoom-2">
       МЫ <span class="color-primary">РЯДОМ</span>
     </span>
   </h2>
-  <h3 class="text text--center text-14 text-md-18 text-lg-24 bold-3 lh-5 mb-5 mb-md-10">
+  <h3 class="text text--center text-14 text-md-18 text-lg-24 bold-3 lh-5 mb-5 mb-md-10 ease-in-out duration-5 anim anim--up" data-anim="hidden">
     Выберите ближайший к вам склад <br class="d-block d-md-none"> в Санкт-Петербурге <br class="d-none d-md-block"> или п. Волома.
     <br class="d-block d-md-none"><span class="bold-5">Отгружаем в день заказа!</span>
   </h3>
   <%= require('./includes/map.html').default %>
-  <button class="cities__btn btn btn--primary btn--lg btn--fill text-md-18 text-lg-20 w-lg-100 mx-auto mt-10" data-waved>Подробнее <span class="d-none d-md-inline">о доставке</span></button>
+  <div class="ease-in-out duration-5 anim anim--up" data-anim="hidden">
+    <button class="cities__btn btn btn--primary btn--lg btn--fill text-md-18 text-lg-20 w-lg-100 mx-auto mt-10" data-waved>Подробнее <span class="d-none d-md-inline">о доставке</span></button>
+  </div>
 </section>
 
 <%= require('./includes/footer.html').default %>
