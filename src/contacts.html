@@ -1,0 +1,75 @@
+<% var data = {
+
+  title: 'Контакты',
+  status: 'contacts'
+
+} %>
+
+<%= _.template(require('./includes/header.html').default)({data}) %>
+
+<!-- Директор -->
+
+<section class="director container container--sm relative overflow-hidden">
+  <div class="bg-block container d-none d-md-block py-0">
+    <div class="relative h-100">
+      <div class="director__pack pack pack--photo w-100 h-100 ease-in-out duration-5 anim anim--right" data-anim="hidden">
+        <picture>
+          <source srcset="img/pictures/director.webp" type="image/webp">
+          <img class="image image--sd image--bl" src="img/pictures/director.png" alt="">
+        </picture>
+      </div>
+    </div>
+  </div>
+  <div class="director__content flex flex-column align-end relative">
+    <div class="director__top d-none d-md-flex align-center mb-4 ease-in-out duration-5 anim anim--right" data-anim="hidden">
+      <div class="icon bg-primary text-16 mr-3 mr-md-5"></div>
+      <span class="text text--uppercase text-20 text-md-24 text-lg-30 bold-4">ваш персональный менеджер</span>
+    </div>
+    <div class="pl-lg-10 ml-lg-10">
+      <picture>
+        <source srcset="img/pictures/director-sm.webp" type="image/webp">
+        <img class="d-block d-md-none w-100 mx-auto ease-in-out duration-5 anim anim--right" data-anim="hidden" src="img/pictures/director-sm.png" alt="">
+      </picture>
+      <div class="d-block d-md-none bg-primary color-white text text--center text-16 bold-4 p-2 px-3 mb-4 ease-in-out duration-5 anim anim--right" data-anim="hidden">Ваш персональный менеджер</div> 
+      <h2 class="director__title text text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 ease-in-out duration-5 anim anim--right" data-anim="hidden">
+        <div class="flex flex-column zoom-2">
+          <span class="color-primary">ВЛАДИМИР</span>
+          <span>ВЛАДИМИРОВИЧ</span>
+        </div>
+      </h2>
+      <p class="text-14 text-md-18 text-lg-24 bold-3 lh-5 mb-4 ease-in-out duration-5 anim anim--right" data-anim="hidden">
+        <span class="bold-5">Поможет оформить заказ,</span> проконтролирует <br class="d-none d-md-block">
+        отгрузку, организует доставку
+      </p>
+      <div class="pl-lg-10">
+        <a class="btn btn--primary link text-10 text-md-20 text-lg-30 bold-4 radius-1 w-max ease-in-out duration-5 anim anim--right" data-anim="hidden" href="tel: +7 921 222 70 00">
+          <span class="zoom-2">+7 921 222 70 00</span>
+        </a>
+        <div class="flex align-center mb-5 ease-in-out duration-5 anim anim--right" data-anim="hidden">
+          <div class="icon d-none d-md-block bg-primary text-16 mr-3 mr-md-5"></div>
+          <span class="text text--uppercase text-16 text-md-18 text-lg-20 bold-5">г. Санкт-Петербург, наб. реки Волковки д.17</span>
+        </div>
+        <div class="director__block">
+          <div class="director__pic pack pack--half w-100 ease-in-out duration-5 anim anim--right" data-anim="hidden">
+            <div class="loader">
+              <span class="loader-progress">
+                <svg class="loader-icon icon">
+                  <use xlink:href="img/icons.svg#loader">
+                </svg>
+              </span>
+            </div>
+            <picture>
+              <source srcset="img/pictures/build.webp" type="image/webp">
+              <img class="image image" src="img/pictures/build.jpg" alt="">
+            </picture>
+          </div>
+          <div class="ease-in-out duration-5 anim anim--right" data-anim="hidden">
+            <button class="director__border director__btn btn btn--primary btn--lg btn--fill text-md-18 text-lg-20 w-lg-100 mx-auto" data-waved>Проложить маршрут</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= require('./includes/footer.html').default %>
