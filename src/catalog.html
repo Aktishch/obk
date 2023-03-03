@@ -1,0 +1,14 @@
+<% var data = {
+
+  title: 'Ассортимент',
+  status: 'catalog'
+
+} %>
+
+<%= _.template(require('./includes/header.html').default)({data}) %>
+
+<!-- Каталог -->
+
+<section class="catalog container"></section>
+
+<%= require('./includes/footer.html').default %>

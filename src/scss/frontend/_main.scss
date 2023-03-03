@@ -1383,3 +1383,34 @@
     }
   }
 }
+
+// Контакты
+.contacts {
+  &__file {
+    max-width: 360px;
+    height: 380px;
+  }
+
+  @media(min-width: $xxl) {
+    &__title {
+      font-size: var(--text-46);
+    }
+
+    &__link {
+      font-size: var(--text-40);
+    }
+  }
+
+  @media(max-width: $lg) {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      max-width: 500px;
+    }
+
+    &__file {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
