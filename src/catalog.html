@@ -9,6 +9,475 @@
 
 <!-- Каталог -->
 
-<section class="catalog container"></section>
+<section class="catalog container" data-catalog>
+  <div class="catalog__top border-bottom pb-5 px-lg-10 pb-lg-10">
+    <div class="catalog__head w-100">
+      <h2 class="catalog__title text text--center text--uppercase text-14 text-md-26 bold-4 lh-2 mb-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+        <span class="zoom-2">
+          <span class="color-primary">ОФОРМИМ</span> ЗАКАЗ?
+        </span>
+      </h2>
+      <p class="flex align-center justify-center text text--center text-16 text-md-20 text-lg-24 bold-4 lh-4">
+        Выберите категории бруса:
+        <button class="catalog__search d-flex d-lg-none btn btn--primary btn--fill radius-max ml-3" data-waved data-catalog-search>
+          <svg class="icon text-16">
+            <use xlink:href="img/icons.svg#arrow-right">
+          </svg>
+        </button>
+      </p>
+    </div>
+  </div>
+  <div class="grid gap-lg-10 pt-5 pt-lg-10 pr-lg-10" data-filter>
+    <div class="catalog__nav flex flex-column col-lg-4 ease duration-3" data-catalog-nav>
+      <div class="d-flex d-lg-none align-center justify-between color-white pointer mb-5 p-5">
+        <span class="text-18 bold-4 mr-4">Категории</span>
+        <button class="btn" data-catalog-close>
+          <svg class="icon color-white text-20">
+            <use xlink:href="img/icons.svg#close">
+          </svg>
+        </button>
+      </div>
+      <div class="catalog__accordion mb-5 mb-md-8" data-accordion="hidden">
+        <div class="catalog__toggle flex align-center relative link bg-primary color-white text-16 text-md-20 text-lg-24 bold-4 lh-3 px-5 py-5 px-md-10 ease duration-3" data-waved data-accordion-toggle>
+          Брус клееный (сосна)
+        </div>
+        <div data-accordion-content>
+          <div class="flex flex-column pt-2">
+            <div class="catalog__item flex align-center justify-between relative link-wrapper bg-grey pointer p-4 mb-1" data-waved data-filter-category="category-1" id="category-1">
+              <span class="link text-14 text-md-16 text-lg-18 bold-5 lh-3 mr-5">1 кат (АЕ)</span>
+              <span class="catalog__btn btn btn--contur radius-max text-12 fade-20">
+                <svg class="icon text-md-20">
+                  <use xlink:href="img/icons.svg#arrow-right">
+                </svg>
+              </span>
+            </div>
+            <div class="catalog__item flex align-center justify-between relative link-wrapper bg-grey pointer p-4 mb-1" data-waved data-filter-category="category-2" id="category-2">
+              <span class="link text-14 text-md-16 text-lg-18 bold-5 lh-3 mr-5">2 кат (А)</span>
+              <span class="catalog__btn btn btn--contur radius-max text-12 fade-20">
+                <svg class="icon text-md-20">
+                  <use xlink:href="img/icons.svg#arrow-right">
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__accordion mb-5 mb-md-8" data-accordion="hidden">
+        <div class="catalog__toggle flex align-center relative link bg-primary color-white text-16 text-md-20 text-lg-24 bold-4 lh-3 px-5 py-5 px-md-10 ease duration-3" data-waved data-accordion-toggle>
+          Доска сращенная
+        </div>
+        <div data-accordion-content>
+          <div class="flex flex-column pt-2">
+            <div class="catalog__item flex align-center justify-between relative link-wrapper bg-grey pointer p-4 mb-1" data-waved data-filter-category="category-3" id="category-3">
+              <span class="link text-14 text-md-16 text-lg-18 bold-5 lh-3 mr-5">Бессучковая</span>
+              <span class="catalog__btn btn btn--contur radius-max text-12 fade-20">
+                <svg class="icon text-md-20">
+                  <use xlink:href="img/icons.svg#arrow-right">
+                </svg>
+              </span>
+            </div>
+            <div class="catalog__item flex align-center justify-between relative link-wrapper bg-grey pointer p-4 mb-1" data-waved data-filter-category="category-4" id="category-4">
+              <span class="link text-14 text-md-16 text-lg-18 bold-5 lh-3 mr-5">С сучками</span>
+              <span class="catalog__btn btn btn--contur radius-max text-12 fade-20">
+                <svg class="icon text-md-20">
+                  <use xlink:href="img/icons.svg#arrow-right">
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="catalog__block col-12 col-lg-8">
+      <div class="grid gap-3 gap-md-6">
+        <div class="catalog__card col-6" data-filter-card="category-1">
+          <div class="card link-wrapper border h-100" data-waved>
+            <div class="pack pack--rect bg-grey w-100">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/benefit-1.webp" type="image/webp">
+                <img class="image image--rise" loading="lazy" src="img/pictures/benefit-1.jpg" alt="">
+              </picture>
+            </div>
+            <div class="card-content py-4 px-2 px-md-4 px-lg-8 py-md-8">
+              <h4 class="link text text--uppercase text-12 text-md-18 text-lg-30 bold-4 lh-5 mb-2 mb-md-4">
+                Брус клееный <br>(сосна), 1 кат (АЕ)
+              </h4>
+              <p class="text text--uppercase text-12 text-md-16 text-lg-20 bold-4 lh-3 mb-2 mb-md-4">
+                <span class="fade-40">Размер:</span> 20 метров
+              </p>
+              <p class="text text--uppercase text-16 text-md-26 text-lg-40 bold-4 lh-1 mb-3 mb-md-5">10 000 рублей</p>
+              <button class="btn btn--primary btn--md btn--fill mt-auto">Заказать</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__card col-6" data-filter-card="category-2">
+          <div class="card link-wrapper border h-100" data-waved>
+            <div class="pack pack--rect bg-grey w-100">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/benefit-1.webp" type="image/webp">
+                <img class="image image--rise" loading="lazy" src="img/pictures/benefit-1.jpg" alt="">
+              </picture>
+            </div>
+            <div class="card-content py-4 px-2 px-md-4 px-lg-8 py-md-8">
+              <h4 class="link text text--uppercase text-12 text-md-18 text-lg-30 bold-4 lh-5 mb-2 mb-md-4">
+                Брус клееный <br>(сосна), 2 кат (АЕ)
+              </h4>
+              <p class="text text--uppercase text-12 text-md-16 text-lg-20 bold-4 lh-3 mb-2 mb-md-4">
+                <span class="fade-40">Размер:</span> 20 метров
+              </p>
+              <p class="text text--uppercase text-16 text-md-26 text-lg-40 bold-4 lh-1 mb-3 mb-md-5">10 000 рублей</p>
+              <button class="btn btn--primary btn--md btn--fill mt-auto">Заказать</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__card col-6" data-filter-card="category-3">
+          <div class="card link-wrapper border h-100" data-waved>
+            <div class="pack pack--rect bg-grey w-100">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/benefit-1.webp" type="image/webp">
+                <img class="image image--rise" loading="lazy" src="img/pictures/benefit-1.jpg" alt="">
+              </picture>
+            </div>
+            <div class="card-content py-4 px-2 px-md-4 px-lg-8 py-md-8">
+              <h4 class="link text text--uppercase text-12 text-md-18 text-lg-30 bold-4 lh-5 mb-2 mb-md-4">
+                Доска сращенная <br>Бессучковая
+              </h4>
+              <p class="text text--uppercase text-12 text-md-16 text-lg-20 bold-4 lh-3 mb-2 mb-md-4">
+                <span class="fade-40">Размер:</span> 20 метров
+              </p>
+              <p class="text text--uppercase text-16 text-md-26 text-lg-40 bold-4 lh-1 mb-3 mb-md-5">10 000 рублей</p>
+              <button class="btn btn--primary btn--md btn--fill mt-auto">Заказать</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__card col-6" data-filter-card="category-3">
+          <div class="card link-wrapper border h-100" data-waved>
+            <div class="pack pack--rect bg-grey w-100">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/benefit-1.webp" type="image/webp">
+                <img class="image image--rise" loading="lazy" src="img/pictures/benefit-1.jpg" alt="">
+              </picture>
+            </div>
+            <div class="card-content py-4 px-2 px-md-4 px-lg-8 py-md-8">
+              <h4 class="link text text--uppercase text-12 text-md-18 text-lg-30 bold-4 lh-5 mb-2 mb-md-4">
+                Доска сращенная <br>Бессучковая
+              </h4>
+              <p class="text text--uppercase text-12 text-md-16 text-lg-20 bold-4 lh-3 mb-2 mb-md-4">
+                <span class="fade-40">Размер:</span> 20 метров
+              </p>
+              <p class="text text--uppercase text-16 text-md-26 text-lg-40 bold-4 lh-1 mb-3 mb-md-5">10 000 рублей</p>
+              <button class="btn btn--primary btn--md btn--fill mt-auto">Заказать</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__card col-6" data-filter-card="category-4">
+          <div class="card link-wrapper border h-100" data-waved>
+            <div class="pack pack--rect bg-grey w-100">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/benefit-1.webp" type="image/webp">
+                <img class="image image--rise" loading="lazy" src="img/pictures/benefit-1.jpg" alt="">
+              </picture>
+            </div>
+            <div class="card-content py-4 px-2 px-md-4 px-lg-8 py-md-8">
+              <h4 class="link text text--uppercase text-12 text-md-18 text-lg-30 bold-4 lh-5 mb-2 mb-md-4">
+                Доска сращенная <br>С сучками
+              </h4>
+              <p class="text text--uppercase text-12 text-md-16 text-lg-20 bold-4 lh-3 mb-2 mb-md-4">
+                <span class="fade-40">Размер:</span> 20 метров
+              </p>
+              <p class="text text--uppercase text-16 text-md-26 text-lg-40 bold-4 lh-1 mb-3 mb-md-5">10 000 рублей</p>
+              <button class="btn btn--primary btn--md btn--fill mt-auto">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Качество -->
+
+<% var quality = [
+  {
+    number: '1',
+    text: 'ПЛОТНОЕ РАСПОЛОЖЕНИЕ КОЛЕЦ <br class="d-none d-md-block"> — ДО 3 ШТУК НА МИЛЛИМЕТР'
+  },
+  {
+    number: '2',
+    text: '520 КГ/М3 <br class="d-none d-md-block"> (ПРИ ВЛАЖНОСТИ 10-12%) '
+  },
+  {
+    number: '3',
+    text: 'ОДНОРОДНЫЙ ЦВЕТ'
+  },
+  {
+    number: '4',
+    text: 'ОДНОРОДНЫЙ ЦВЕТ'
+  }
+] %>
+
+<section class="quality container relative overflow-hidden">
+  <div class="quality__pack pack pack--box absolute zi-1 w-100">
+    <div class="loader">
+      <span class="loader-progress">
+        <svg class="loader-icon icon">
+          <use xlink:href="img/icons.svg#loader">
+        </svg>
+      </span>
+    </div>
+    <picture>
+      <source srcset="img/pictures/wood.webp" type="image/webp">
+      <img class="image image--sd" src="img/pictures/wood.png" alt="">
+    </picture>
+  </div>
+  <div class="relative">
+    <h2 class="quality__title relative zi-1 text text--uppercase text-14 text-md-26 bold-4 lh-2 mb-10 pb-lg-10 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+      <div class="flex flex-column align-end zoom-2">
+        <span class="color-primary">НАШЕ КАЧЕСТВО -</span>
+        <span class="pr-lg-10">ВАШ КОМФОРТ</span>
+        <span>И УВЕРЕННОСТЬ</span>
+      </div>
+    </h2>
+    <div class="flex flex-column align-end">
+      <% for (var i = 0; i < quality.length; i++) { %>
+        <div class="quality__item quality__item--<%= quality[i].number %> flex align-center justify-end relative bg-primary w-100 py-10 py-md-5 px-5 px-md-10 mb-8 ease-in-out duration-5 anim anim--left" data-waved data-anim="hidden">
+          <div class="quality__circle flex align-center justify-center absolute zi-2 bg-primary color-white text-20 text-md-40 radius-max my-auto">+</div>
+          <p class="relative zi-2 color-white text text--uppercase text-16 text-md-24 text-lg-28 bold-4 lh-5">
+            <%= quality[i].text %>
+          </p>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!-- Галлерея -->
+
+<section class="gallery overflow-hidden">
+  <div class="gallery__top container mb-5 mb-md-10 pb-0 pb-lg-10">
+    <h2 class="gallery__title text text--center text--uppercase text-14 text-md-26 bold-4 lh-2 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+      <span class="zoom-2">
+        <div class="gallery__text d-inline d-md-block">
+          <span class="color-primary">МНОГОСТУПЕНЧАТЫЙ</span> <br class="d-none d-md-block">
+          КОНТРОЛЬ КАЧЕСТВА
+        </div>
+        ОТ ЛЕСОПИЛКИ ДО ЛОГИСТИКИ
+      </span>
+    </h2>
+  </div>
+  <div class="gallery__container container pt-0">
+    <div class="gallery__items grid grid--rows gap-2 gap-lg-10">
+      <div class="col-12 col-md-8 row-2 row-lg-4 ease-in-out duration-5 anim anim--increase" data-anim="hidden">
+        <a class="gallery__item pack pack--rect h-100" data-fancybox="gallery" href="img/pictures/transport.jpg">
+          <div class="loader">
+            <span class="loader-progress">
+              <svg class="loader-icon icon">
+                <use xlink:href="img/icons.svg#loader">
+              </svg>
+            </span>
+          </div>
+          <picture>
+            <source srcset="img/pictures/transport.webp" type="image/webp">
+            <img class="image image--rise" src="img/pictures/transport.jpg" alt="">
+          </picture>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 row-2 row-lg-1 ease-in-out duration-5 anim anim--increase" data-anim="hidden">
+        <a class="gallery__item pack pack--rect h-100" data-fancybox="gallery" href="img/pictures/gallery-2.jpg">
+          <div class="loader">
+            <span class="loader-progress">
+              <svg class="loader-icon icon">
+                <use xlink:href="img/icons.svg#loader">
+              </svg>
+            </span>
+          </div>
+          <picture>
+            <source srcset="img/pictures/gallery-2.webp" type="image/webp">
+            <img class="image image--rise" src="img/pictures/gallery-2.jpg" alt="">
+          </picture>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 row-2 row-lg-1 ease-in-out duration-5 anim anim--increase" data-anim="hidden">
+        <a class="gallery__item pack pack--rect h-100" data-fancybox="gallery" href="img/pictures/gallery-1.jpg">
+          <div class="loader">
+            <span class="loader-progress">
+              <svg class="loader-icon icon">
+                <use xlink:href="img/icons.svg#loader">
+              </svg>
+            </span>
+          </div>
+          <picture>
+            <source srcset="img/pictures/gallery-1.webp" type="image/webp">
+            <img class="image image--rise" src="img/pictures/gallery-1.jpg" alt="">
+          </picture>
+        </a>
+      </div>
+      <div class="col-12 col-md-8 col-lg-4 row-2 row-lg-3 ease-in-out duration-5 anim anim--increase" data-anim="hidden">
+        <a class="gallery__item pack pack--rect h-100" data-fancybox="gallery" href="img/pictures/gallery-3.jpg">
+          <div class="loader">
+            <span class="loader-progress">
+              <svg class="loader-icon icon">
+                <use xlink:href="img/icons.svg#loader">
+              </svg>
+            </span>
+          </div>
+          <picture>
+            <source srcset="img/pictures/gallery-3.webp" type="image/webp">
+            <img class="image image--rise" src="img/pictures/gallery-3.jpg" alt="">
+          </picture>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Награды -->
+
+<section class="awards container container--sm overflow-hidden">
+  <div class="awards__content flex justify-between gap-lg-10">
+    <h2 class="awards__title text text--uppercase text-14 text-md-26 bold-4 lh-2 mb-5 mb-lg-0 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+      <span class="zoom-2">
+        <div class="color-primary">
+          ПРОДУКЦИЯ <br class="d-none d-md-block">СЕРТИФИЦИРОВАНА
+        </div>
+        <div class="pl-lg-10 ml-lg-10">
+          И ОТВЕЧАЕТ <br class="d-none d-md-block">
+          СТАНДАРТАМ <br class="d-none d-md-block">
+          КАЧЕСТВА
+        </div>
+      </span>
+    </h2>
+    <div class="awards__items flex align-center justify-between gap-md-6 w-100">
+      <div class="awards__item w-100 mb-8 mb-md-0 ease-in-out duration-5 delay-lg-2 anim anim--up" data-anim="hidden">
+        <a class="card w-100 h-100" data-waved href="" target="_blank">
+          <div class="awards__pack pack pack--photo border">
+            <div class="loader">
+              <span class="loader-progress">
+                <svg class="loader-icon icon">
+                  <use xlink:href="img/icons.svg#loader">
+                </svg>
+              </span>
+            </div>
+            <picture>
+              <source srcset="img/pictures/doc-1.webp" type="image/webp">
+              <img class="image" loading="lazy" src="img/pictures/doc-1.jpg" alt="">
+            </picture>
+          </div>
+          <div class="card-content py-5 px-5 py-lg-8">
+            <button class="awards__btn btn btn--second text text--center text--underline text-16 bold-5 radius-1 p-1 mx-auto">Посмотреть подробнее</button>
+          </div>
+        </a>
+      </div>
+      <div class="awards__item w-100 ease-in-out duration-5 delay-lg-4 anim anim--up" data-anim="hidden">
+        <a class="card w-100 h-100" data-waved href="" target="_blank">
+          <div class="awards__pack pack pack--photo border">
+            <div class="loader">
+              <span class="loader-progress">
+                <svg class="loader-icon icon">
+                  <use xlink:href="img/icons.svg#loader">
+                </svg>
+              </span>
+            </div>
+            <picture>
+              <source srcset="img/pictures/doc-2.webp" type="image/webp">
+              <img class="image" loading="lazy" src="img/pictures/doc-2.jpg" alt="">
+            </picture>
+          </div>
+          <div class="card-content py-5 px-5 py-lg-8">
+            <button class="awards__btn btn btn--second text text--center text--underline text-16 bold-5 radius-1 p-1 mx-auto">Посмотреть подробнее</button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Образец -->
+
+<section class="sample container container--sm flex flex-column relative overflow-hidden">
+  <picture class="order-2">
+    <source srcset="img/pictures/car.webp" type="image/webp">
+    <img class="sample__image d-block absolute pointer-none w-100 ease-in-out duration-5 anim anim--right" data-anim="hidden" src="img/pictures/car.png" alt="">
+  </picture>
+  <div class="sample__content order-1 flex flex-column align-end relative">
+    <h2 class="sample__title text text--center text--uppercase text-14 text-md-26 bold-4 lh-2 mb-3 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+      <div class="zoom-2">
+        ПОЛУЧИТЕ <br class="d-none d-md-block">
+        <div class="pl-lg-10 ml-lg-10">
+          <span class="color-primary">БЕСПЛАТНЫЙ</span> ОБРАЗЕЦ
+        </div>
+      </div>
+    </h2>
+    <p class="text text--center text-16 text-md-20 text-lg-26 bold-3 lh-5 mb-5 mb-md-10 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+      <span class="bold-5">чтобы лично убедиться в качестве</span><br class="d-block d-md-none"> оконного бруса 
+    </p>
+    <form class="sample__form form w-100" data-form="submit">
+      <input type="hidden" value="Бесплатный образец" name="theme">
+      <div class="grid gap-4 mb-5 mb-md-8">
+        <label class="col-12 col-lg-6 form-label" data-label="input">
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input" data-input="name" type="text" placeholder="Ваше имя" name="name">
+            </div>
+            <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваше имя!</span>
+          </div>
+        </label>
+        <label class="col-12 col-lg-6 form-label" data-label="input">
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input" data-input="tel" type="tel" placeholder="Ваш телефон" name="tel">
+            </div>
+            <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваш номер!</span>
+          </div>
+        </label>
+        <label class="col-12 col-lg-6 form-label" data-label="input">
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input" data-input="text" type="text" placeholder="Адрес отправки">
+            </div>
+            <span class="form-error anim anim--fade" data-error>Пожалуйста, введите адрес отправки!</span>
+          </div>
+        </label>
+        <button class="col-12 col-lg-6 btn btn--primary btn--lg btn--fill" data-waved type="submit">Получить образец</button>
+      </div>
+      <div class="link text-14 text-md-16 text-lg-18 bold-4 lh-5 fade-50 w-100 w-md-max pl-lg-10" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">Нажимая на кнопку вы соглашаетесь на обработку персональных данных</div>
+    </form>
+  </div>
+</section>
 
 <%= require('./includes/footer.html').default %>

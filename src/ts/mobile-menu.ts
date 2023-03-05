@@ -28,12 +28,6 @@ const init = (): void => {
   burger.addEventListener('click', openMobileMenu as EventListener)
   close.addEventListener('click', closeMobileMenu as EventListener)
 
-  mobile.addEventListener('click', ((event: Event): void => {
-
-    if ((event.target as HTMLAnchorElement).hasAttribute('data-scroll')) closeMobileMenu()
-
-  }) as EventListener)
-
   document.addEventListener('click', ((event: Event): void => {
 
     if ((event.target as HTMLElement).hasAttribute('data-mobile')) closeMobileMenu()

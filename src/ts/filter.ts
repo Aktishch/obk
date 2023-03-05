@@ -13,9 +13,9 @@ const filtering = (name: string, cards: NodeListOf<Element>): void => {
     } else {
 
       card.classList.remove('d-none')
-      card.classList.add('filter__card--show')
+      card.classList.add('catalog__card--show')
 
-      setTimeout((): void => card.classList.remove('filter__card--show'), 300)
+      setTimeout((): void => card.classList.remove('catalog__card--show'), 300)
 
     }
 
@@ -33,23 +33,13 @@ const init = (): void => {
 
     if (!filter) return
 
-    const hash: string = window.location.hash
+    const hash: string = window.location.hash.substr(1)
     const categories = filter.querySelectorAll('*[data-filter-category]') as NodeListOf<Element>
-    const categoryActive = filter.getElementsByClassName('filter__category--active') as HTMLCollectionOf<Element>
-    const line = filter.querySelector('*[data-filter-line]') as HTMLElement
     const cards = filter.querySelectorAll('*[data-filter-card]') as NodeListOf<Element>
-
-    if (line) line.style.width = `${(categories[0] as HTMLElement).offsetWidth}px`
 
     const currentCard = (category: HTMLElement): void => {
 
       const name: string = String(category.dataset.filterCategory)
-
-      categoryActive[0].className = categoryActive[0].className.replace('filter__category--active', '')
-      category.classList.add('filter__category--active')
-
-      line.style.width = `${category.offsetWidth}px`
-      line.style.left = `${category.offsetLeft}px`
 
       filtering(name, cards)
 
@@ -69,11 +59,20 @@ const init = (): void => {
 
     if (hash && hash != '') {
 
-      for (const [index, card] of cards.entries()) {
+      for (const [index, toggle] of categories.entries()) {
 
-        if (card.querySelector(hash)) {
+        if (toggle.id == hash) {
 
+          const accordion = toggle.closest('[data-accordion]') as HTMLElement
+          const content = accordion.querySelector('*[data-accordion-content]') as HTMLElement
           const category = categories[index] as HTMLElement
+
+          if (accordion.dataset.accordion == 'hidden') {
+
+            accordion.dataset.accordion = 'active'
+            content.style.maxHeight = `${content.scrollHeight}px`
+
+          }
 
           currentCard(category)
 

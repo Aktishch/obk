@@ -23,34 +23,46 @@
 
   @include getBtn("primary");
   @include getBtn("second");
-  @include getBtn("gray");
+  @include getBtn("grey");
 
   &--lg {
     --size: var(--size-lg);
     height: var(--size);
+
+    @media(max-width: $xl) {
+      & {
+        --size: 80px;
+      }
+    }
+
+    @media(max-width: $md) {
+      & {
+        --size: 60px;
+      }
+    }
   }
 
   &--md {
     --size: var(--size-md);
     height: var(--size);
+
+    @media(max-width: $xl) {
+      & {
+        --size: 60px;
+      }
+    }
+
+    @media(max-width: $md) {
+      & {
+        --size: 50px;
+      }
+    }
   }
 
   &--lg,
   &--md {
     border-radius : 5px;
     padding-inline: calc(var(--size) / 2);
-
-    @media(max-width: $xl) {
-      & {
-        height: 80px;
-      }
-    }
-
-    @media(max-width: $md) {
-      & {
-        height: 60px;
-      }
-    }
   }
 
   &--fill {

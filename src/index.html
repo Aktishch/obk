@@ -67,7 +67,7 @@
 <section class="benefit container container--sm relative" data-listing>
   <div class="benefit__content mb-5 mb-md-10">
     <h3 class="benefit__subtitle text text--center text-14 text-md-16 bold-5 lh-5 fade-10 mb-2 ease-in-out duration-5 anim anim--up" data-anim="hidden">какой-то подзаголовок сделать ещё</span>
-    <h2 class="benefit__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+    <h2 class="benefit__title flex flex-column text text--center text--uppercase text-14 text-md-26 bold-4 lh-2 mb-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
       <span class="zoom-2">
         ВЫГОДНЫЕ <br class="d-none d-md-block">
         <span class="color-primary">ПРЕДЛОЖЕНИЯ</span><br class="d-none d-md-block">
@@ -82,7 +82,7 @@
   <div class="grid gap-lg-9 pt-lg-5">
     <% for (var i = 0; i < about.length; i++) { %>
       <div class="col-12 col-lg-4 <%= about[i].item %> ease-in-out duration-5 anim anim--up" data-anim="hidden" <%= about[i].data %>>
-        <div class="benefit__card card link-wrapper border h-100" data-waved>
+        <a class="benefit__card card link-wrapper border h-100" data-waved href="catalog.html#category-1">
           <div class="benefit__pack pack pack--rect bg-grey w-100">
             <div class="loader">
               <span class="loader-progress">
@@ -98,7 +98,7 @@
           </div>
           <div class="card-content py-5 px-4 px-lg-0 py-md-10">
             <div class="flex align-center justify-between mb-3 mb-md-5">
-              <span class="benefit__name link text text--uppercase text-16 text-md-22 text-lg-20 bold-4 lh-5">
+              <span class="benefit__name link text text--uppercase text-14 text-md-22 text-lg-30 bold-4 lh-5">
                 Брус клееный <br>(сосна), 1 кат (АЕ)
               </span>
               <button class="benefit__btn btn btn--contur text-18 radius-max fade-20 mr-10">
@@ -107,11 +107,11 @@
                 </svg>
               </button>
             </div>
-            <h4 class="benefit__price text-12 text-md-16 text-lg-20">
+            <h4 class="benefit__price text-10 text-md-16 text-lg-20">
               <span class="text text--uppercase bold-4 lh-1 zoom-2">10 000 рублей</span>
             </h4>
           </div>
-        </div>
+        </a>
       </div>
     <% } %>
   </div>
@@ -144,10 +144,10 @@
 ] %>
 
 <section class="availability container">
-  <h2 class="availability__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 mb-md-10 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+  <h2 class="availability__title flex flex-column text text--center text--uppercase text-14 text-md-26 bold-4 lh-2 mb-5 mb-md-10 ease-in-out duration-5 anim anim--up" data-anim="hidden">
     <span class="zoom-2">
       <span class="color-primary">В ПОСТОЯННОМ <br class="d-none d-md-block">
-      <span class="pl-lg-10 ml-lg-9">НАЛИЧИИ</span></span><br class="d-block d-md-none">
+      <span class="pl-lg-10 ml-lg-9">НАЛИЧИИ</span></span>
       БОЛЕЕ 80м<sup>3</sup>
     </span>
   </h2>
@@ -223,10 +223,9 @@
     </picture>
   </div>
   <div class="relative">
-    <h2 class="assortment__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 mb-md-10 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+    <h2 class="assortment__title flex flex-column text text--center text--uppercase text-14 text-md-26 bold-4 lh-2 mb-5 mb-md-10 ease-in-out duration-5 anim anim--up" data-anim="hidden">
       <span class="zoom-2">
-        УДОБНО, <br class="d-block d-md-none">
-        ПОТОМУ ЧТО <br>
+        УДОБНО, ПОТОМУ ЧТО <br>
         <span class="assortment__text color-primary">ВСЕ В ОДНОМ МЕСТЕ</span>
     </h2>
     <div class="grid gap-3 gap-md-5 gap-lg-10 pt-lg-5">
@@ -261,7 +260,7 @@
 
 <section class="reviews container overflow-hidden">
   <div class="reviews-slider relative">
-    <h2 class="reviews__title flex flex-column align-end text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 w-lg-max mb-5 mb-md-10 mr-auto ease-in-out duration-5 anim anim--right" data-anim="hidden">
+    <h2 class="reviews__title flex flex-column align-end text text--center text--uppercase text-14 text-md-26 bold-4 lh-2 w-lg-max mb-5 mb-md-10 mr-auto ease-in-out duration-5 anim anim--right" data-anim="hidden">
       <div class="flex align-end">
         <div class="reviews__number color-primary">
           <span class="zoom-5 bold-2">950</span>
@@ -324,7 +323,7 @@
 <!-- Производство -->
 
 <section class="production container relative overflow-hidden">
-  <h2 class="production__title flex flex-column text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 w-md-max ease-in-out duration-5 anim anim--right" data-anim="hidden">
+  <h2 class="production__title flex flex-column text text--center text--uppercase text-14 text-md-26 bold-4 lh-2 w-md-max ease-in-out duration-5 anim anim--right" data-anim="hidden">
     <div class="production__top flex align-end">
       <div class="flex align-end">
         <div class="production__number color-primary">
@@ -381,7 +380,7 @@
 <!-- Города -->
 
 <section class="cities container overflow-hidden">
-  <h2 class="cities__title text text--center text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+  <h2 class="cities__title text text--center text--uppercase text-14 text-md-26 bold-4 lh-2 mb-2 mb-md-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
     <span class="zoom-2">
       МЫ <span class="color-primary">РЯДОМ</span>
     </span>

@@ -26,25 +26,27 @@
       <span class="text text--uppercase text-20 text-md-24 text-lg-30 bold-4">ваш персональный менеджер</span>
     </div>
     <div class="pl-lg-10 ml-lg-10">
-      <picture>
-        <source srcset="img/pictures/director-sm.webp" type="image/webp">
-        <img class="d-block d-md-none w-100 mx-auto ease-in-out duration-5 anim anim--right" data-anim="hidden" src="img/pictures/director-sm.png" alt="">
-      </picture>
-      <div class="d-block d-md-none bg-primary color-white text text--center text-16 bold-4 p-2 px-3 mb-4 ease-in-out duration-5 anim anim--right" data-anim="hidden">Ваш персональный менеджер</div> 
-      <h2 class="director__title text text--uppercase text-16 text-md-26 bold-4 lh-2 mb-5 ease-in-out duration-5 anim anim--right" data-anim="hidden">
+      <h2 class="director__title text text--uppercase text-14 text-md-26 bold-4 lh-2 mb-5 ease-in-out duration-5 anim anim--right" data-anim="hidden">
         <div class="flex flex-column zoom-2">
           <span class="color-primary">ВЛАДИМИР</span>
           <span>ВЛАДИМИРОВИЧ</span>
         </div>
       </h2>
+      <picture>
+        <source srcset="img/pictures/director-sm.webp" type="image/webp">
+        <img class="d-block d-md-none w-100 mx-auto ease-in-out duration-5 anim anim--right" data-anim="hidden" src="img/pictures/director-sm.png" alt="">
+      </picture>
+      <div class="d-block d-md-none bg-primary color-white text text--center text-16 bold-4 p-2 px-3 mb-4 ease-in-out duration-5 anim anim--right" data-anim="hidden">Ваш персональный менеджер</div> 
       <p class="text-14 text-md-18 text-lg-24 bold-3 lh-5 mb-4 ease-in-out duration-5 anim anim--right" data-anim="hidden">
         <span class="bold-5">Поможет оформить заказ,</span> проконтролирует <br class="d-none d-md-block">
         отгрузку, организует доставку
       </p>
       <div class="pl-lg-10">
-        <a class="btn btn--primary link text-10 text-md-20 text-lg-30 bold-4 radius-1 w-max ease-in-out duration-5 anim anim--right" data-anim="hidden" href="tel: +7 921 222 70 00">
-          <span class="zoom-2">+7 921 222 70 00</span>
-        </a>
+        <div class="ease-in-out duration-5 anim anim--right" data-anim="hidden">
+          <a class="btn btn--primary link text-10 text-md-20 text-lg-30 bold-4 radius-1 w-max" data-waved href="tel: +7 921 222 70 00">
+            <span class="zoom-2">+7 921 222 70 00</span>
+          </a>
+        </div>
         <div class="flex align-center mb-5 ease-in-out duration-5 anim anim--right" data-anim="hidden">
           <div class="icon d-none d-md-block bg-primary text-16 mr-3 mr-md-5"></div>
           <span class="text text--uppercase text-16 text-md-18 text-lg-20 bold-5">г. Санкт-Петербург, наб. реки Волковки д.17</span>
@@ -60,11 +62,11 @@
             </div>
             <picture>
               <source srcset="img/pictures/build.webp" type="image/webp">
-              <img class="image image" src="img/pictures/build.jpg" alt="">
+              <img class="image image--rise" src="img/pictures/build.jpg" alt="">
             </picture>
           </div>
           <div class="ease-in-out duration-5 anim anim--right" data-anim="hidden">
-            <button class="director__border director__btn btn btn--primary btn--lg btn--fill text-md-18 text-lg-20 w-lg-100 mx-auto" data-waved>Проложить маршрут</span></button>
+            <button class="director__border director__btn btn btn--primary btn--lg btn--fill text-md-18 text-lg-20 w-lg-100 mx-auto" data-waved>Проложить маршрут</button>
           </div>
         </div>
       </div>
@@ -76,7 +78,7 @@
 
 <section class="contacts container bg-primary py-0">
   <div class="contacts__content flex justify-between mx-auto">
-    <div class="flex flex-column color-white py-5 py-md-10 px-lg-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+    <div class="contacts__item contacts__item--1 flex flex-column color-white w-100 w-md-auto py-5 py-md-10 px-lg-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
       <h2 class="contacts__title text text--uppercase text-24 text-md-28 text-lg-36 bold-4 lh-4 mb-5 mb-md-10">Головной офис</h2>
       <div class="flex align-center mb-5">
         <svg class="icon text-16 text-md-22 mr-4">
@@ -84,20 +86,22 @@
         </svg>
         <span class="text-16 text-md-20 text-lg-22 bold-3 lh-4">г. Петрозаводск, Германа Титова 12</span>
       </div>
-      <a class="contacts__link link text-20 text-md-30 text-lg-40 bold-3 lh-1 w-max mb-5 pl-lg-10" href="tel: +7 921 222 70 00">+7 921 222 70 00</a>
-      <a class="link text-16 text-md-20 text-lg-22 bold-3 w-max" href="mailto: info@brus-karelia.ru">info@brus-karelia.ru</a>
+      <div class="mb-5 pl-lg-10">
+        <a class="contacts__link link btn btn--primary btn--fill text-20 text-md-30 text-lg-40 bold-3 lh-1 w-max" data-waved href="tel: +7 921 222 70 00">+7 921 222 70 00</a>
+      </div>
+      <a class="link btn btn--primary btn--fill text-16 text-md-20 text-lg-22 bold-3 w-max" data-waved href="mailto: info@brus-karelia.ru">info@brus-karelia.ru</a>
     </div>
-    <a class="contacts__file flex flex-column align-center justify-center relative link-wrapper bg-grey w-100 mx-auto p-5" data-waved href="">
-      <span class="link text text--center text-16 text-md-18 text-lg-20 bold-5 lh-9 mb-4">
+    <a class="contacts__file btn btn--grey btn--fill flex-column link-wrapper color-black bg-grey w-100 p-5 mb-5 mb-md-0" data-waved href="">
+      <span class="link text text--center text-16 text-md-18 text-lg-20 bold-5 lh-9 mb-lg-4">
         Скачать <br>
         реквизиты <br>
         компании
       </span>
-      <svg class="icon text-30 text-lg-40 color-primary">
+      <svg class="icon text-30 text-lg-40 color-primary ml-3 ml-lg-0">
         <use xlink:href="img/icons.svg#file">
       </svg>
     </a>
-    <div class="flex flex-column color-white py-5 py-md-10 px-lg-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
+    <div class="contacts__item contacts__item--2 flex flex-column color-white w-100 w-md-auto py-5 py-md-10 px-lg-5 ease-in-out duration-5 anim anim--up" data-anim="hidden">
       <h2 class="contacts__title text text--uppercase text-24 text-md-28 text-lg-36 bold-4 lh-4 mb-5 mb-md-10">Связь с директором</h2>
       <div class="flex align-center mb-5">
         <svg class="icon text-16 text-md-22 mr-4">
@@ -105,8 +109,10 @@
         </svg>
         <span class="text-16 text-md-20 text-lg-22 bold-3 lh-4">Андрей Дедин</span>
       </div>
-      <a class="contacts__link link text-20 text-md-30 text-lg-40 bold-3 lh-1 w-max mb-5 pl-lg-10" href="tel: +7 921 650 97 97">+7 921 650 97 97</a>
-      <a class="link text-16 text-md-20 text-lg-22 bold-3 w-max" href="mailto: director@brus-karelia.ru">director@brus-karelia.ru</a>
+      <div class="mb-5 pl-lg-10">
+        <a class="contacts__link link btn btn--primary btn--fill text-20 text-md-30 text-lg-40 bold-3 lh-1 w-max" data-waved href="tel: +7 921 650 97 97">+7 921 650 97 97</a>
+      </div>
+      <a class="link btn btn--primary btn--fill text-16 text-md-20 text-lg-22 bold-3 w-max" data-waved href="mailto: director@brus-karelia.ru">director@brus-karelia.ru</a>
     </div>
   </div>
 </section>

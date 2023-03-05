@@ -1,24 +1,6 @@
 import formValidate from './functions/form-validate'
 import dialog from './functions/dialog'
 
-const formParams = (event: Event): void => {
-
-  event.preventDefault()
-
-  const form = event.target as HTMLFormElement
-
-  if (!formValidate.init(form)) return
-
-  const formData: FormData = new FormData(form)
-  const queryString: string = new URLSearchParams(formData as URLSearchParams).toString()
-  const requestUrl: string = `/dialogs/dialog-authorization.html?${queryString}`
-
-  dialog.close()
-
-  dialog.open('fancybox-dialog', requestUrl)
-
-}
-
 const formSubmit = (event: Event): void => {
 
   event.preventDefault()
@@ -65,8 +47,6 @@ const formSubmit = (event: Event): void => {
 const init = (): void => {
 
   document.addEventListener('submit', ((event: Event): void => {
-
-    if ((event.target as HTMLFormElement).getAttribute('data-form') == 'params') formParams(event)
 
     if ((event.target as HTMLFormElement).getAttribute('data-form') == 'submit') formSubmit(event)
 
