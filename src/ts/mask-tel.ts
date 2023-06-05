@@ -31,6 +31,12 @@ const init = (): void => {
 
   }) as EventListener)
 
+  document.addEventListener('paste', ((event: InputEvent): void => {
+
+    if ((event.target as HTMLInputElement).getAttribute('type') == 'tel') phoneMask(event)
+
+  }) as EventListener)
+
 }
 
 export default { init }
